@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AcademyException.java&apos; to &apos;projectJPA/src/main/java/com.betacom.jpa.exception&apos;&#x0D;&#x0A;- Original project: &apos;projectJDBC&apos;&#x0D;&#x0A;- Destination element: &apos;projectJPA/src/main/java/com.betacom.jpa.exception&apos;&#x0D;&#x0A;- Original element: &apos;com.betacom.jdbc.exceptions.AcademyException.java&apos;" description="Copy compilation unit" destination="=projectJPA/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.betacom.jpa.exception" element1="/src&lt;com.betacom.jdbc.exceptions{AcademyException.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1753188720175" units="1" version="1.0"/>
+</session>

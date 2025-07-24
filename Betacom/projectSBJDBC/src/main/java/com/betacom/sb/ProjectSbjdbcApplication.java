@@ -1,0 +1,30 @@
+package com.betacom.sb;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.betacom.sb.component.BusinessComponent;
+
+@SpringBootApplication
+public class ProjectSbjdbcApplication {
+
+	@Autowired
+	private BusinessComponent bu;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(ProjectSbjdbcApplication.class, args);
+	}
+	
+	@Bean
+	CommandLineRunner commandLineRunner() {
+		
+		return args ->{
+//			bu.listUffici();
+		};
+				
+	}
+
+}

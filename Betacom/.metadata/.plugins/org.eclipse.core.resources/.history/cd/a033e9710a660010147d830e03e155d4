@@ -1,0 +1,75 @@
+package com.betacom.car.dao;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import com.betacom.car.singletone.SQLConfiguration;
+import com.betacom.car.utilities.SQLManager;
+import com.betacom.sb.models.Moto;
+
+public class MotoDAO {
+
+	private SQLManager db = new SQLManager();
+	
+	// Funzione per trovare tutti gli elementi dentro "Macchina"
+	public List<Moto> findAll() throws Exception{
+		
+		String qry = SQLConfiguration.getInstance().getQuery("moto");
+		
+		System.out.println("\nQuery findAll delle moto: " + qry + "\n");
+		
+		List<Map<String, Object>> lD = db.list(qry);
+	
+		return lD.stream()
+			    .map(row -> new Moto(
+			        (Integer) row.get("id_moto"),
+			        (String) row.get("targa"),
+			        (Integer) row.get("cc")
+			    ))
+			    .collect(Collectors.toList());
+
+	}
+	
+	// Funzione di INSERT di una moto
+	public int insert(String qryName, Object[] params) throws Exception{
+		
+		int numero = 0;
+		
+		String qry = SQLConfiguration.getInstance().getQuery(qryName);
+		System.out.println("\nQuery di insert per una moto: " + qry);
+		
+		numero = db.update(qry, params, true); // Aggiungo la visualizzazione della primary key generata
+		
+		return numero;
+		
+	}
+	
+	// Funzione di UPDATE di una moto
+	public int update(String qryName, Object[] params) throws Exception {
+		
+	    int numero = 0;
+	    
+	    String qry = SQLConfiguration.getInstance().getQuery(qryName);
+	    System.out.println("\nQuery di update per una moto: " + qry);
+	    
+	    numero = db.update(qry, params); 
+	    
+	    return numero;
+	}
+	
+	// Funzione di DELETE di una moto
+	public int delete(String qryName, Object[] params) throws Exception{
+		
+		int numero = 0;
+		
+		String qry = SQLConfiguration.getInstance().getQuery(qryName);
+		System.out.println("\nQuery di delete per moto: " + qry);
+		
+		numero = db.update(qry, params); 
+		
+		return numero;
+		
+	}
+	
+}

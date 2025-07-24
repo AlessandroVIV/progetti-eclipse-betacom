@@ -1,0 +1,2 @@
+spring.application.name=projectSBJDBC
+spring.datasource.url=jdbc:mysql://localhost:3306/current_academy

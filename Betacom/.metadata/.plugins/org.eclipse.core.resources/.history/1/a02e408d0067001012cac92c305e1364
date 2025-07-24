@@ -1,0 +1,5 @@
+package com.betacom.jpa.requests;
+
+public class CertificatoRequest {
+
+}

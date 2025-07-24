@@ -1,0 +1,233 @@
+package com.betacom.car.utilities;
+
+import com.betacom.car.dao.BiciDAO;
+import com.betacom.car.dao.MacchinaDAO;
+import com.betacom.car.dao.MotoDAO;
+import com.betacom.car.dao.VeicoloDAO;
+
+public class GestioneMetodi {
+
+    private final VeicoloDAO daoV;
+    private final MacchinaDAO daoM;
+    private final MotoDAO daoMo;
+    private final BiciDAO daoB;
+
+    public GestioneMetodi(VeicoloDAO daoV, MacchinaDAO daoM, MotoDAO daoMo, BiciDAO daoB) {
+        this.daoV = daoV;
+        this.daoM = daoM;
+        this.daoMo = daoMo;
+        this.daoB = daoB;
+    }
+
+	private void gestisciAddGenerico(String riga) throws Exception {
+
+		String[] parti = riga.split(":");
+		if (parti.length < 2)
+			return;
+
+		String[] valori = parti[1].split(",");
+		String tipo = valori[0].toLowerCase();
+
+		switch (tipo) {
+		case "macchina" -> insertMacchina(valori);
+		case "moto" -> insertMoto(valori);
+		case "bici" -> insertBici(valori);
+		default -> System.out.println("Tipo non gestito: " + tipo);
+		}
+	}
+
+	private void gestisciUpdateGenerico(String riga) throws Exception {
+		String[] parti = riga.split(":");
+		if (parti.length < 2)
+			return;
+
+		String[] valori = parti[1].split(",", 3); // tipo, id, campi
+		if (valori.length < 3) {
+			System.out.println("Update malformato: " + riga);
+			return;
+		}
+
+		String tipo = valori[0].toLowerCase();
+		int id = Integer.parseInt(valori[1]);
+		String[] campi = valori[2].split(",");
+
+		switch (tipo) {
+		case "macchina" -> updateMacchina(id, campi);
+		case "moto" -> updateMoto(id, campi);
+		case "bici" -> updateBici(id, campi);
+		default -> System.out.println("Tipo non gestito nell'update: " + tipo);
+		}
+	}
+
+	private void gestisciDeleteGenerico(String riga) throws Exception {
+		
+		String[] parti = riga.split(":");
+		
+		if (parti.length < 2)
+			return;
+
+		String[] valori = parti[1].split(",");
+		if (valori.length < 2) {
+			System.out.println("Formato delete non valido. Serve tipo,idTipo");
+			return;
+		}
+
+		String tipo = valori[0].trim().toLowerCase();
+		int idTipo = Integer.parseInt(valori[1].trim()); // ← fix qui
+
+		int idVeicolo = switch (tipo) {
+		case "macchina" -> Utils.getIdVeicoloByTipo("id_macchina", idTipo);
+		case "moto" -> Utils.getIdVeicoloByTipo("id_moto", idTipo);
+		case "bici" -> Utils.getIdVeicoloByTipo("id_bici", idTipo);
+		default -> throw new Exception("Tipo non gestito: " + tipo);
+		};
+
+		if (idVeicolo != -1) {
+			int deletedVeicolo = daoV.delete("delete_veicolo", new Object[] { idVeicolo });
+			System.out.println("Veicolo eliminato! Righe eliminate: " + deletedVeicolo);
+		} else {
+			System.out.println("Nessun veicolo trovato per " + tipo + " con id = " + idTipo);
+		}
+
+		int deleted = switch (tipo) {
+		case "macchina" -> daoM.delete("delete_macchina", new Object[] { idTipo });
+		case "moto" -> daoMo.delete("delete_moto", new Object[] { idTipo });
+		case "bici" -> daoB.delete("delete_bici", new Object[] { idTipo });
+		default -> 0;
+		};
+
+		System.out.println("Delete " + tipo + " - righe eliminate: " + deleted);
+	}
+
+	private void gestisciListGenerico(String riga) throws Exception {
+	    String[] parti = riga.split(":");
+	    if (parti.length < 2) {
+	        System.out.println("Formato list non valido. Usa: list:<tipo>");
+	        return;
+	    }
+
+	    String tipo = parti[1].trim().toLowerCase();
+
+	    switch (tipo) {
+	        case "macchina" -> daoM.findAll().forEach(System.out::println);
+	        case "moto"     -> daoMo.findAll().forEach(System.out::println);
+	        case "bici"     -> daoB.findAll().forEach(System.out::println);
+	        case "veicoli"  -> daoV.findAll().forEach(System.out::println);
+	        default         -> System.out.println("Tipo non gestito per list: " + tipo);
+	    }
+	}
+
+	private void insertMacchina(String[] c) throws Exception {
+		int idNumeroRuote = Utils.getIdFromValue("numeroruote", "numeroruote", c[1]);
+		int idAlim = Utils.getIdFromValue("alimentazione", "alimentazione", c[2]);
+		int idCat = Utils.getIdFromValue("categoria", "categoria", c[3]);
+		int idColore = Utils.getIdFromValue("colore", "colore", c[4]);
+		int idMarca = Utils.getIdFromValue("marca", "marca", c[5]);
+		int anno = Integer.parseInt(c[6]);
+		int idModello = Utils.getIdFromValue("modello", "modello", c[7]);
+		int porte = Integer.parseInt(c[8]);
+		String targa = c[9];
+		int cc = Integer.parseInt(c[10]);
+
+		int idMacchina = daoM.insert("insert_macchina", new Object[] { porte, targa, cc });
+		Object[] veicoloParams = { anno, idNumeroRuote, idAlim, idCat, idColore, idMarca, idModello, idMacchina, null,
+				null };
+		daoV.insert("insert_veicolo", veicoloParams);
+	}
+
+	private void insertMoto(String[] c) throws Exception {
+		int idNumeroRuote = Utils.getIdFromValue("numeroruote", "numeroruote", c[1]);
+		int idAlim = Utils.getIdFromValue("alimentazione", "alimentazione", c[2]);
+		int idCat = Utils.getIdFromValue("categoria", "categoria", c[3]);
+		int idColore = Utils.getIdFromValue("colore", "colore", c[4]);
+		int idMarca = Utils.getIdFromValue("marca", "marca", c[5]);
+		int anno = Integer.parseInt(c[6]);
+		int idModello = Utils.getIdFromValue("modello", "modello", c[7]);
+		String targa = c[8];
+		int cc = Integer.parseInt(c[9]);
+
+		int idMoto = daoMo.insert("insert_moto", new Object[] { targa, cc });
+		Object[] veicoloParams = { anno, idNumeroRuote, idAlim, idCat, idColore, idMarca, idModello, null, idMoto,
+				null };
+		daoV.insert("insert_veicolo", veicoloParams);
+	}
+
+	private void insertBici(String[] c) throws Exception {
+		int idNumeroRuote = Utils.getIdFromValue("numeroruote", "numeroruote", c[1]);
+		int idAlim = Utils.getIdFromValue("alimentazione", "alimentazione", c[2]);
+		int idCat = Utils.getIdFromValue("categoria", "categoria", c[3]);
+		int idColore = Utils.getIdFromValue("colore", "colore", c[4]);
+		int idMarca = Utils.getIdFromValue("marca", "marca", c[5]);
+		int anno = Integer.parseInt(c[6]);
+		int idModello = Utils.getIdFromValue("modello", "modello", c[7]);
+		int marce = Integer.parseInt(c[8]);
+		int idSosp = Utils.getIdFromValue("sospensione", "sospensione", c[9]);
+		boolean pieghevole = Boolean.parseBoolean(c[10]);
+
+		int idBici = daoB.insert("insert_bici", new Object[] { marce, idSosp, pieghevole });
+		Object[] veicoloParams = { anno, idNumeroRuote, idAlim, idCat, idColore, idMarca, idModello, null, null,
+				idBici };
+		daoV.insert("insert_veicolo", veicoloParams);
+	}
+
+	private void updateMacchina(int id, String[] campi) throws Exception {
+
+		String targa = null;
+		Integer porte = null;
+		Integer cc = null;
+
+		for (String campo : campi) {
+			String[] coppia = campo.split("=");
+			switch (coppia[0]) {
+			case "targa" -> targa = coppia[1];
+			case "porte" -> porte = Integer.parseInt(coppia[1]);
+			case "cc" -> cc = Integer.parseInt(coppia[1]);
+			}
+		}
+
+		Object[] params = { porte != null ? porte : 0, targa != null ? targa : "", cc != null ? cc : 0, id };
+		int updated = daoM.update("update_macchina", params);
+		System.out.println("Update macchina - righe modificate: " + updated);
+	}
+
+	private void updateMoto(int id, String[] campi) throws Exception {
+
+		String targa = null;
+		Integer cc = null;
+
+		for (String campo : campi) {
+			String[] coppia = campo.split("=");
+			switch (coppia[0]) {
+			case "targa" -> targa = coppia[1];
+			case "cc" -> cc = Integer.parseInt(coppia[1]);
+			}
+		}
+
+		Object[] params = { targa != null ? targa : "", cc != null ? cc : 0, id };
+		int updated = daoMo.update("update_moto", params);
+		System.out.println("Update moto - righe modificate: " + updated);
+	}
+
+	private void updateBici(int id, String[] campi) throws Exception {
+
+		Integer marce = null;
+		Integer idSospensione = null;
+		Boolean pieghevole = null;
+
+		for (String campo : campi) {
+			String[] coppia = campo.split("=");
+			switch (coppia[0]) {
+			case "marce" -> marce = Integer.parseInt(coppia[1]);
+			case "sospensione" -> idSospensione = Utils.getIdFromValue("sospensione", "tipoSospensione", coppia[1]);
+			case "pieghevole" -> pieghevole = Boolean.parseBoolean(coppia[1]);
+			}
+		}
+
+		Object[] params = { marce != null ? marce : 0, idSospensione != null ? idSospensione : 0,
+				pieghevole != null ? pieghevole : false, id };
+
+		int updated = daoB.update("update_bici", params);
+		System.out.println("Update bici - righe modificate: " + updated);
+	}
+	
+}

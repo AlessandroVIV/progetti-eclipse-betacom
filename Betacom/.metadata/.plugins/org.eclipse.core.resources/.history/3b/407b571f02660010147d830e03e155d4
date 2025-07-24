@@ -1,0 +1,32 @@
+package com.betacom.sb.component;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import com.betacom.sb.dao.UfficiDAO;
+import com.betacom.sb.models.Uffici;
+
+@Component
+
+public class BusinessComponent {
+
+	@Autowired
+	private UfficiDAO uDao;
+
+
+	public void listUffici() {
+		
+		System.out.println("Inizia ListaUffici");
+		List<Uffici> lU = uDao.getUffici();
+		lU.forEach(u -> System.out.println(u));
+		
+		System.out.println("\nSelect per id = 3\n");
+		lU = uDao.getUfficioById(3);
+		lU.forEach(u -> System.out.println(u));
+		
+		System.out.println("Numero record inseriti: " + uDao.addUfficio("Prova"));
+		
+	}
+	
+}

@@ -1,0 +1,1263 @@
+2025-07-24T09:22:19.702+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 15796 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T09:22:19.710+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T09:22:19.711+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T09:22:19.774+02:00  INFO 15796 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T09:22:20.201+02:00  INFO 15796 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T09:22:20.269+02:00  INFO 15796 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2025-07-24T09:22:20.609+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T09:22:21.097+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1be762cd
+2025-07-24T09:22:21.099+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T09:22:21.154+02:00  INFO 15796 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T09:22:21.256+02:00  INFO 15796 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T09:22:21.304+02:00  INFO 15796 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T09:22:21.654+02:00  INFO 15796 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T09:22:21.772+02:00  INFO 15796 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T09:22:22.655+02:00  INFO 15796 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T09:22:22.684+02:00  INFO 15796 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T09:22:23.194+02:00  INFO 15796 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T09:22:23.227+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 3.963 seconds (process running for 4.738)
+2025-07-24T09:22:23.234+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, nome=Paolo, cognome=Rossi, codiceFiscale=123456789, email=p.rossi@t.it)
+2025-07-24T09:22:23.488+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] c.b.j.s.implementations.CertificatoImpl  : Creata: CertificatoRequest(id=null, tipo=false, dataCertificato=2025-01-01, socioId=2)
+2025-07-24T09:22:23.527+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, nome=Bruno, cognome=Verde, codiceFiscale=88888888888, email=p.rossi@t.it)
+2025-07-24T09:22:23.540+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] c.b.j.s.implementations.CertificatoImpl  : Creata: CertificatoRequest(id=null, tipo=true, dataCertificato=2025-02-02, socioId=3)
+2025-07-24T09:22:23.555+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : delete :SocioReq(id=3, nome=null, cognome=null, codiceFiscale=null, email=null)
+2025-07-24T09:22:23.584+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After delete socio
+2025-07-24T09:22:23.585+02:00 DEBUG 15796 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, nome=Alberto, cognome=Nero, codiceFiscale=9999999999, email=a.nero@t.it)
+2025-07-24T09:22:23.614+02:00  INFO 15796 --- [projectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24T09:22:23.636+02:00 ERROR 15796 --- [projectJPA] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NullPointerException: Cannot invoke "com.betacom.jpa.models.Certificato.getId()" because the return value of "com.betacom.jpa.models.Socio.getCertificato()" is null
+	at com.betacom.jpa.services.implementations.SocioImpl.lambda$0(SocioImpl.java:73) ~[classes/:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[na:na]
+	at com.betacom.jpa.services.implementations.SocioImpl.listAll(SocioImpl.java:79) ~[classes/:na]
+	at com.betacom.jpa.process.MainProcess.execute(MainProcess.java:81) ~[classes/:na]
+	at com.betacom.jpa.ProjectJpaApplication.lambda$0(ProjectJpaApplication.java:25) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-6.2.9.jar:6.2.9]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.2.9.jar:6.2.9]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-6.2.9.jar:6.2.9]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+	at com.betacom.jpa.ProjectJpaApplication.main(ProjectJpaApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.8-SNAPSHOT.jar:3.4.8-SNAPSHOT]
+
+2025-07-24T09:22:23.645+02:00  INFO 15796 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T09:22:23.648+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T09:22:23.658+02:00  INFO 15796 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T09:30:00.479+02:00  INFO 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 12664 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T09:30:00.481+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T09:30:00.482+02:00  INFO 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T09:30:00.536+02:00  INFO 12664 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T09:30:01.067+02:00  INFO 12664 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T09:30:01.146+02:00  INFO 12664 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-07-24T09:30:01.537+02:00  INFO 12664 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T09:30:02.002+02:00  INFO 12664 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29e23a5
+2025-07-24T09:30:02.006+02:00  INFO 12664 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T09:30:02.057+02:00  INFO 12664 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T09:30:02.116+02:00  INFO 12664 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T09:30:02.159+02:00  INFO 12664 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T09:30:02.506+02:00  INFO 12664 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T09:30:02.631+02:00  INFO 12664 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T09:30:03.568+02:00  INFO 12664 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T09:30:03.599+02:00  INFO 12664 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T09:30:04.111+02:00  INFO 12664 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T09:30:04.148+02:00  INFO 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 4.179 seconds (process running for 5.029)
+2025-07-24T09:30:04.182+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, nome=Paolo, cognome=Rossi, codiceFiscale=123456789, email=p.rossi@t.it)
+2025-07-24T09:30:04.487+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] c.b.j.s.implementations.CertificatoImpl  : Creata: CertificatoRequest(id=null, tipo=false, dataCertificato=2025-01-01, socioId=5)
+2025-07-24T09:30:04.521+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, nome=Bruno, cognome=Verde, codiceFiscale=88888888888, email=p.rossi@t.it)
+2025-07-24T09:30:04.537+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] c.b.j.s.implementations.CertificatoImpl  : Creata: CertificatoRequest(id=null, tipo=true, dataCertificato=2025-02-02, socioId=6)
+2025-07-24T09:30:04.554+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : delete :SocioReq(id=6, nome=null, cognome=null, codiceFiscale=null, email=null)
+2025-07-24T09:30:04.586+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After delete socio
+2025-07-24T09:30:04.588+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, nome=Alberto, cognome=Nero, codiceFiscale=9999999999, email=a.nero@t.it)
+2025-07-24T09:30:04.623+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : SocioDTO(id=5, nome=Paolo, cognome=Rossi, codiceFiscale=123456789, email=p.rossi@t.it, certificato=CertificatoDTO(id=4, tipo=false, dataCertificato=2025-01-01))
+2025-07-24T09:30:04.624+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : SocioDTO(id=7, nome=Alberto, cognome=Nero, codiceFiscale=9999999999, email=a.nero@t.it, certificato=null)
+2025-07-24T09:30:04.624+02:00 DEBUG 12664 --- [projectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : Fine lavoro
+2025-07-24T09:30:04.632+02:00  INFO 12664 --- [projectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T09:30:04.635+02:00  INFO 12664 --- [projectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T09:30:04.644+02:00  INFO 12664 --- [projectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T10:09:02.194+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 17636 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:09:02.196+02:00 DEBUG 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:09:02.197+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:09:02.253+02:00  INFO 17636 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T10:09:02.253+02:00  INFO 17636 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T10:09:03.140+02:00  INFO 17636 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:09:03.227+02:00  INFO 17636 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:09:03.980+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:09:03.997+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:09:03.998+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:09:04.060+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:09:04.061+02:00  INFO 17636 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1807 ms
+2025-07-24T10:09:04.233+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T10:09:04.659+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5849911b
+2025-07-24T10:09:04.661+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T10:09:04.712+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:09:04.777+02:00  INFO 17636 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T10:09:04.819+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:09:05.165+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:09:05.284+02:00  INFO 17636 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:09:06.224+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:09:06.256+02:00  INFO 17636 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:09:06.773+02:00  WARN 17636 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:09:07.206+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T10:09:07.255+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T10:09:07.266+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.595 seconds (process running for 6.539)
+2025-07-24T10:19:58.612+02:00  INFO 17636 --- [projectJPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-24T10:19:58.617+02:00  INFO 17636 --- [projectJPA] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T10:19:58.629+02:00  INFO 17636 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T10:19:58.635+02:00  INFO 17636 --- [projectJPA] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:19:58.644+02:00  INFO 17636 --- [projectJPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T10:19:58.658+02:00  INFO 17636 --- [projectJPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T10:19:58.790+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 17636 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:19:58.792+02:00 DEBUG 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:19:58.792+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:19:59.025+02:00  INFO 17636 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:19:59.046+02:00  INFO 17636 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:19:59.068+02:00  INFO 15700 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 15700 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:19:59.071+02:00 DEBUG 15700 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:19:59.074+02:00  INFO 15700 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:19:59.134+02:00  INFO 15700 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T10:19:59.139+02:00  INFO 15700 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T10:19:59.156+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:19:59.158+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:19:59.159+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:19:59.181+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:19:59.182+02:00  INFO 17636 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 386 ms
+2025-07-24T10:19:59.226+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-24T10:19:59.247+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d9d44ac
+2025-07-24T10:19:59.248+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-24T10:19:59.249+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:19:59.253+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:19:59.264+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:19:59.267+02:00  INFO 17636 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:19:59.336+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:19:59.341+02:00  INFO 17636 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:19:59.438+02:00  WARN 17636 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:19:59.559+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T10:19:59.572+02:00  INFO 17636 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T10:19:59.576+02:00  INFO 17636 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 0.842 seconds (process running for 658.849)
+2025-07-24T10:19:59.579+02:00  INFO 17636 --- [projectJPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-24T10:19:59.937+02:00  INFO 15700 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:20:00.023+02:00  INFO 15700 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:20:00.602+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:20:00.622+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:20:00.622+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:20:00.742+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:20:00.743+02:00  INFO 15700 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1603 ms
+2025-07-24T10:20:00.904+02:00  INFO 15700 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T10:20:01.350+02:00  INFO 15700 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c19e47a
+2025-07-24T10:20:01.352+02:00  INFO 15700 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T10:20:01.405+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:20:01.471+02:00  INFO 15700 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T10:20:01.516+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:20:01.866+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:20:01.990+02:00  INFO 15700 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:20:02.909+02:00  INFO 15700 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:20:02.940+02:00  INFO 15700 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:20:03.381+02:00  WARN 15700 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:20:03.766+02:00  WARN 15700 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-24T10:20:03.798+02:00  WARN 15700 --- [projectJPA] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-24T10:20:03.799+02:00  INFO 15700 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:20:03.803+02:00  INFO 15700 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T10:20:03.813+02:00  INFO 15700 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T10:20:03.828+02:00  INFO 15700 --- [projectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24T10:20:03.852+02:00 ERROR 15700 --- [projectJPA] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-07-24T10:20:32.421+02:00  INFO 6244 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 6244 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:20:32.425+02:00 DEBUG 6244 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:20:32.427+02:00  INFO 6244 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:20:32.485+02:00  INFO 6244 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T10:20:32.487+02:00  INFO 6244 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T10:20:33.295+02:00  INFO 6244 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:20:33.378+02:00  INFO 6244 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:20:33.930+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:20:33.954+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:20:33.955+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:20:34.071+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:20:34.072+02:00  INFO 6244 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1585 ms
+2025-07-24T10:20:34.231+02:00  INFO 6244 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T10:20:34.690+02:00  INFO 6244 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76ca188a
+2025-07-24T10:20:34.694+02:00  INFO 6244 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T10:20:34.749+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:20:34.814+02:00  INFO 6244 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T10:20:34.864+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:20:35.230+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:20:35.361+02:00  INFO 6244 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:20:36.358+02:00  INFO 6244 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:20:36.392+02:00  INFO 6244 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:20:36.854+02:00  WARN 6244 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:20:37.258+02:00  WARN 6244 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-24T10:20:37.346+02:00  WARN 6244 --- [projectJPA] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-24T10:20:37.358+02:00  INFO 6244 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:20:37.364+02:00  INFO 6244 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T10:20:37.378+02:00  INFO 6244 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T10:20:37.396+02:00  INFO 6244 --- [projectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24T10:20:37.419+02:00 ERROR 6244 --- [projectJPA] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-07-24T10:21:15.171+02:00  INFO 17636 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T10:21:15.172+02:00  INFO 17636 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T10:21:15.176+02:00  INFO 17636 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T10:24:22.223+02:00  INFO 17636 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T10:24:22.225+02:00  INFO 17636 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T10:24:22.232+02:00  INFO 17636 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T10:24:22.236+02:00  INFO 17636 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:24:22.236+02:00  INFO 17636 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-07-24T10:24:22.243+02:00  INFO 17636 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-07-24T10:24:27.616+02:00  INFO 8728 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 8728 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:24:27.618+02:00 DEBUG 8728 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:24:27.620+02:00  INFO 8728 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:24:27.679+02:00  INFO 8728 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T10:24:27.683+02:00  INFO 8728 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T10:24:28.456+02:00  INFO 8728 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:24:28.534+02:00  INFO 8728 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:24:29.077+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:24:29.096+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:24:29.097+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:24:29.167+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:24:29.167+02:00  INFO 8728 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1482 ms
+2025-07-24T10:24:29.327+02:00  INFO 8728 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T10:24:29.766+02:00  INFO 8728 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@289ff41f
+2025-07-24T10:24:29.771+02:00  INFO 8728 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T10:24:29.824+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:24:29.890+02:00  INFO 8728 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T10:24:29.935+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:24:30.275+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:24:30.411+02:00  INFO 8728 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:24:31.329+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:24:31.359+02:00  INFO 8728 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:24:31.814+02:00  WARN 8728 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:24:32.193+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T10:24:32.242+02:00  INFO 8728 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T10:24:32.256+02:00  INFO 8728 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.184 seconds (process running for 6.104)
+2025-07-24T10:24:39.708+02:00  INFO 8728 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T10:24:39.709+02:00  INFO 8728 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T10:24:39.711+02:00  INFO 8728 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T10:37:21.670+02:00  INFO 8728 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T10:37:21.674+02:00  INFO 8728 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T10:37:21.683+02:00  INFO 8728 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T10:37:21.688+02:00  INFO 8728 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:37:21.693+02:00  INFO 8728 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T10:37:21.704+02:00  INFO 8728 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T10:37:26.740+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 6328 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:37:26.742+02:00 DEBUG 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:37:26.743+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:37:26.801+02:00  INFO 6328 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T10:37:26.801+02:00  INFO 6328 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T10:37:27.583+02:00  INFO 6328 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:37:27.665+02:00  INFO 6328 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:37:28.190+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:37:28.208+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:37:28.209+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:37:28.272+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:37:28.273+02:00  INFO 6328 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1470 ms
+2025-07-24T10:37:28.432+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T10:37:28.871+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4250047f
+2025-07-24T10:37:28.874+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T10:37:28.924+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:37:28.987+02:00  INFO 6328 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T10:37:29.030+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:37:29.369+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:37:29.488+02:00  INFO 6328 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:37:30.448+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:37:30.480+02:00  INFO 6328 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:37:30.927+02:00  WARN 6328 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:37:31.329+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T10:37:31.378+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T10:37:31.387+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.173 seconds (process running for 6.042)
+2025-07-24T10:37:33.538+02:00  INFO 6328 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T10:37:33.539+02:00  INFO 6328 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T10:37:33.540+02:00  INFO 6328 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T10:38:27.256+02:00  INFO 6328 --- [projectJPA] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-24T10:38:27.262+02:00  INFO 6328 --- [projectJPA] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T10:38:27.273+02:00  INFO 6328 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T10:38:27.279+02:00  INFO 6328 --- [projectJPA] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:38:27.286+02:00  INFO 6328 --- [projectJPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T10:38:27.300+02:00  INFO 6328 --- [projectJPA] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T10:38:27.429+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 6328 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:38:27.429+02:00 DEBUG 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:38:27.429+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:38:27.700+02:00  INFO 6328 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:38:27.729+02:00  INFO 6328 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:38:27.857+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:38:27.860+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:38:27.860+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:38:27.886+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:38:27.886+02:00  INFO 6328 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 448 ms
+2025-07-24T10:38:27.919+02:00  INFO 5020 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 5020 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:38:27.920+02:00 DEBUG 5020 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:38:27.920+02:00  INFO 5020 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:38:27.935+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-24T10:38:27.959+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@303f0573
+2025-07-24T10:38:27.959+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-24T10:38:27.962+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:38:27.967+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:38:27.982+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:38:27.989+02:00  INFO 5020 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T10:38:27.989+02:00  INFO 6328 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:38:27.989+02:00  INFO 5020 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T10:38:28.071+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:38:28.075+02:00  INFO 6328 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:38:28.194+02:00  WARN 6328 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:38:28.323+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T10:38:28.337+02:00  INFO 6328 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T10:38:28.344+02:00  INFO 6328 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 0.966 seconds (process running for 63.001)
+2025-07-24T10:38:28.348+02:00  INFO 6328 --- [projectJPA] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-24T10:38:28.778+02:00  INFO 5020 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:38:28.854+02:00  INFO 5020 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:38:29.411+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:38:29.429+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:38:29.429+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:38:29.491+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:38:29.492+02:00  INFO 5020 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1501 ms
+2025-07-24T10:38:29.656+02:00  INFO 5020 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T10:38:30.100+02:00  INFO 5020 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d309bd5
+2025-07-24T10:38:30.113+02:00  INFO 5020 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T10:38:30.165+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:38:30.231+02:00  INFO 5020 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T10:38:30.271+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:38:30.615+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:38:30.737+02:00  INFO 5020 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:38:31.667+02:00  INFO 5020 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:38:31.696+02:00  INFO 5020 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:38:32.124+02:00  WARN 5020 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:38:32.524+02:00  WARN 5020 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-24T10:38:32.556+02:00  WARN 5020 --- [projectJPA] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-24T10:38:32.559+02:00  INFO 5020 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:38:32.563+02:00  INFO 5020 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T10:38:32.571+02:00  INFO 5020 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T10:38:32.586+02:00  INFO 5020 --- [projectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24T10:38:32.609+02:00 ERROR 5020 --- [projectJPA] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-07-24T10:38:33.485+02:00  INFO 6328 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T10:38:33.486+02:00  INFO 6328 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T10:38:33.487+02:00  INFO 6328 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T10:48:34.741+02:00  INFO 6328 --- [projectJPA] [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T10:48:34.742+02:00  INFO 6328 --- [projectJPA] [RMI TCP Connection(14)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T10:48:34.750+02:00  INFO 6328 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T10:48:34.753+02:00  INFO 6328 --- [projectJPA] [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:48:34.754+02:00  INFO 6328 --- [projectJPA] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-07-24T10:48:34.761+02:00  INFO 6328 --- [projectJPA] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-07-24T10:48:39.974+02:00  INFO 9556 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 9556 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T10:48:39.977+02:00 DEBUG 9556 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T10:48:39.978+02:00  INFO 9556 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T10:48:40.034+02:00  INFO 9556 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T10:48:40.035+02:00  INFO 9556 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T10:48:40.833+02:00  INFO 9556 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T10:48:40.909+02:00  INFO 9556 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2025-07-24T10:48:41.463+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T10:48:41.483+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T10:48:41.483+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T10:48:41.550+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T10:48:41.551+02:00  INFO 9556 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1516 ms
+2025-07-24T10:48:41.708+02:00  INFO 9556 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T10:48:42.140+02:00  INFO 9556 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@324770fa
+2025-07-24T10:48:42.164+02:00  INFO 9556 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T10:48:42.215+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T10:48:42.282+02:00  INFO 9556 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T10:48:42.329+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T10:48:42.664+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T10:48:42.784+02:00  INFO 9556 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T10:48:43.714+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T10:48:43.744+02:00  INFO 9556 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T10:48:44.203+02:00  WARN 9556 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T10:48:44.584+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T10:48:44.628+02:00  INFO 9556 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T10:48:44.638+02:00  INFO 9556 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.199 seconds (process running for 6.081)
+2025-07-24T10:48:46.540+02:00  INFO 9556 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T10:48:46.542+02:00  INFO 9556 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T10:48:46.544+02:00  INFO 9556 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T11:33:14.242+02:00  INFO 9556 --- [projectJPA] [RMI TCP Connection(49)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T11:33:14.246+02:00  INFO 9556 --- [projectJPA] [RMI TCP Connection(49)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T11:33:14.256+02:00  INFO 9556 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T11:33:14.273+02:00  INFO 9556 --- [projectJPA] [RMI TCP Connection(49)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:33:14.279+02:00  INFO 9556 --- [projectJPA] [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T11:33:14.289+02:00  INFO 9556 --- [projectJPA] [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T11:33:34.445+02:00  INFO 20124 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 20124 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T11:33:34.449+02:00 DEBUG 20124 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T11:33:34.451+02:00  INFO 20124 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T11:33:34.450+02:00  INFO 18952 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 18952 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T11:33:34.453+02:00 DEBUG 18952 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T11:33:34.454+02:00  INFO 18952 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T11:33:34.517+02:00  INFO 20124 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T11:33:34.517+02:00  INFO 20124 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T11:33:34.520+02:00  INFO 18952 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T11:33:34.521+02:00  INFO 18952 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T11:33:35.623+02:00  INFO 18952 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T11:33:35.623+02:00  INFO 20124 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T11:33:35.706+02:00  INFO 20124 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2025-07-24T11:33:35.710+02:00  INFO 18952 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 2 JPA repository interfaces.
+2025-07-24T11:33:36.360+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T11:33:36.361+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T11:33:36.381+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T11:33:36.381+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T11:33:36.382+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T11:33:36.383+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T11:33:36.516+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T11:33:36.516+02:00  INFO 18952 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1995 ms
+2025-07-24T11:33:36.516+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T11:33:36.517+02:00  INFO 20124 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1999 ms
+2025-07-24T11:33:36.707+02:00  INFO 18952 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T11:33:36.713+02:00  INFO 20124 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T11:33:37.154+02:00  INFO 18952 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16f59ac7
+2025-07-24T11:33:37.157+02:00  INFO 18952 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T11:33:37.160+02:00  INFO 20124 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46139d2d
+2025-07-24T11:33:37.164+02:00  INFO 20124 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T11:33:37.209+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T11:33:37.214+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T11:33:37.271+02:00  INFO 18952 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T11:33:37.279+02:00  INFO 20124 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T11:33:37.322+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T11:33:37.328+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T11:33:37.699+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T11:33:37.700+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T11:33:37.843+02:00  INFO 20124 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T11:33:37.849+02:00  INFO 18952 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T11:33:38.879+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T11:33:38.903+02:00  INFO 20124 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T11:33:38.905+02:00  INFO 18952 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:33:38.931+02:00  INFO 20124 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:33:39.450+02:00  WARN 18952 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T11:33:39.450+02:00  WARN 20124 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T11:33:39.929+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T11:33:39.932+02:00  WARN 20124 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-24T11:33:40.026+02:00  WARN 20124 --- [projectJPA] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-24T11:33:40.029+02:00  INFO 20124 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:33:40.033+02:00  INFO 20124 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T11:33:40.040+02:00  INFO 18952 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T11:33:40.041+02:00  INFO 20124 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T11:33:40.052+02:00  INFO 18952 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 6.149 seconds (process running for 7.466)
+2025-07-24T11:33:40.056+02:00  INFO 20124 --- [projectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24T11:33:40.075+02:00 ERROR 20124 --- [projectJPA] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-07-24T11:33:46.525+02:00  INFO 18952 --- [projectJPA] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T11:33:46.526+02:00  INFO 18952 --- [projectJPA] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T11:33:46.528+02:00  INFO 18952 --- [projectJPA] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T11:33:56.924+02:00  INFO 12040 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 12040 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T11:33:56.927+02:00 DEBUG 12040 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T11:33:56.929+02:00  INFO 12040 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T11:33:56.987+02:00  INFO 12040 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T11:33:56.987+02:00  INFO 12040 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T11:33:57.892+02:00  INFO 12040 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T11:33:57.964+02:00  INFO 12040 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2025-07-24T11:33:58.499+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T11:33:58.516+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T11:33:58.517+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T11:33:58.633+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T11:33:58.633+02:00  INFO 12040 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1645 ms
+2025-07-24T11:33:58.787+02:00  INFO 12040 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T11:33:59.221+02:00  INFO 12040 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ac87c59
+2025-07-24T11:33:59.224+02:00  INFO 12040 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T11:33:59.275+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T11:33:59.341+02:00  INFO 12040 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T11:33:59.386+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T11:33:59.720+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T11:33:59.843+02:00  INFO 12040 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T11:34:00.847+02:00  INFO 12040 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T11:34:00.878+02:00  INFO 12040 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:34:01.449+02:00  WARN 12040 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T11:34:01.975+02:00  WARN 12040 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-24T11:34:02.010+02:00  WARN 12040 --- [projectJPA] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-24T11:34:02.013+02:00  INFO 12040 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:34:02.017+02:00  INFO 12040 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T11:34:02.027+02:00  INFO 12040 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T11:34:02.047+02:00  INFO 12040 --- [projectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24T11:34:02.073+02:00 ERROR 12040 --- [projectJPA] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-07-24T11:34:11.762+02:00  INFO 18952 --- [projectJPA] [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T11:34:11.766+02:00  INFO 18952 --- [projectJPA] [RMI TCP Connection(4)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T11:34:11.773+02:00  INFO 18952 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T11:34:11.779+02:00  INFO 18952 --- [projectJPA] [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:34:11.783+02:00  INFO 18952 --- [projectJPA] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T11:34:11.793+02:00  INFO 18952 --- [projectJPA] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T11:34:14.477+02:00  INFO 18868 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 18868 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T11:34:14.480+02:00 DEBUG 18868 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T11:34:14.481+02:00  INFO 18868 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T11:34:14.537+02:00  INFO 18868 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T11:34:14.537+02:00  INFO 18868 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T11:34:15.450+02:00  INFO 18868 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T11:34:15.525+02:00  INFO 18868 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2025-07-24T11:34:16.080+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T11:34:16.098+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T11:34:16.099+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T11:34:16.166+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T11:34:16.166+02:00  INFO 18868 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1628 ms
+2025-07-24T11:34:16.322+02:00  INFO 18868 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T11:34:16.779+02:00  INFO 18868 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33263577
+2025-07-24T11:34:16.783+02:00  INFO 18868 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T11:34:16.840+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T11:34:16.908+02:00  INFO 18868 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T11:34:16.954+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T11:34:17.295+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T11:34:17.423+02:00  INFO 18868 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T11:34:18.434+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T11:34:18.464+02:00  INFO 18868 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:34:19.021+02:00  WARN 18868 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T11:34:19.535+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T11:34:19.583+02:00  INFO 18868 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T11:34:19.595+02:00  INFO 18868 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.631 seconds (process running for 6.545)
+2025-07-24T11:34:25.008+02:00  INFO 18868 --- [projectJPA] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T11:34:25.009+02:00  INFO 18868 --- [projectJPA] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T11:34:25.010+02:00  INFO 18868 --- [projectJPA] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T11:35:20.563+02:00  INFO 18868 --- [projectJPA] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 304 ms
+2025-07-24T11:59:56.910+02:00  INFO 18868 --- [projectJPA] [RMI TCP Connection(29)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T11:59:56.916+02:00  INFO 18868 --- [projectJPA] [RMI TCP Connection(29)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T11:59:56.926+02:00  INFO 18868 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T11:59:56.933+02:00  INFO 18868 --- [projectJPA] [RMI TCP Connection(29)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T11:59:56.938+02:00  INFO 18868 --- [projectJPA] [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T11:59:57.004+02:00  INFO 18868 --- [projectJPA] [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T11:59:59.965+02:00  INFO 17972 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 17972 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T11:59:59.969+02:00 DEBUG 17972 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T11:59:59.969+02:00  INFO 17972 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:00:00.044+02:00  INFO 17972 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:00:00.046+02:00  INFO 17972 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:00:00.996+02:00  INFO 17972 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:00:01.072+02:00  INFO 17972 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:00:01.624+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:00:01.641+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:00:01.642+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:00:01.707+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:00:01.708+02:00  INFO 17972 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1662 ms
+2025-07-24T12:00:01.867+02:00  INFO 17972 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:00:02.294+02:00  INFO 17972 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13d9abd7
+2025-07-24T12:00:02.296+02:00  INFO 17972 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:00:02.346+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:00:02.415+02:00  INFO 17972 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:00:02.497+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:00:02.829+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:00:02.950+02:00  INFO 17972 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:00:03.939+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:00:03.970+02:00  INFO 17972 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:00:04.527+02:00  WARN 17972 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:00:05.026+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:00:05.072+02:00  INFO 17972 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:00:05.083+02:00  INFO 17972 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.638 seconds (process running for 6.534)
+2025-07-24T12:00:20.221+02:00  INFO 17972 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T12:00:20.222+02:00  INFO 17972 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T12:00:20.224+02:00  INFO 17972 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T12:00:20.837+02:00  INFO 17972 --- [projectJPA] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 297 ms
+2025-07-24T12:01:57.995+02:00  INFO 17972 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:01:57.998+02:00  INFO 17972 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:01:58.006+02:00  INFO 17972 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:01:58.013+02:00  INFO 17972 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:01:58.017+02:00  INFO 17972 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:01:58.027+02:00  INFO 17972 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:02:00.828+02:00  INFO 15616 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 15616 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:02:00.832+02:00 DEBUG 15616 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:02:00.833+02:00  INFO 15616 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:02:00.889+02:00  INFO 15616 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:02:00.890+02:00  INFO 15616 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:02:01.876+02:00  INFO 15616 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:02:01.980+02:00  INFO 15616 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:02:02.565+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:02:02.583+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:02:02.583+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:02:02.649+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:02:02.649+02:00  INFO 15616 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1759 ms
+2025-07-24T12:02:02.817+02:00  INFO 15616 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:02:03.286+02:00  INFO 15616 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e89a36e
+2025-07-24T12:02:03.289+02:00  INFO 15616 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:02:03.346+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:02:03.419+02:00  INFO 15616 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:02:03.465+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:02:03.827+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:02:03.956+02:00  INFO 15616 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:02:05.108+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:02:05.143+02:00  INFO 15616 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:02:05.717+02:00  WARN 15616 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:02:06.247+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:02:06.295+02:00  INFO 15616 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:02:06.307+02:00  INFO 15616 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.992 seconds (process running for 6.873)
+2025-07-24T12:02:06.387+02:00  INFO 15616 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T12:02:06.387+02:00  INFO 15616 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T12:02:06.390+02:00  INFO 15616 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-24T12:02:18.580+02:00  INFO 15616 --- [projectJPA] [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 321 ms
+2025-07-24T12:03:06.536+02:00  INFO 15616 --- [projectJPA] [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:03:06.541+02:00  INFO 15616 --- [projectJPA] [RMI TCP Connection(3)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:03:06.549+02:00  INFO 15616 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:03:06.556+02:00  INFO 15616 --- [projectJPA] [RMI TCP Connection(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:03:06.560+02:00  INFO 15616 --- [projectJPA] [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:03:06.570+02:00  INFO 15616 --- [projectJPA] [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:03:09.320+02:00  INFO 2912 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 2912 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:03:09.323+02:00 DEBUG 2912 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:03:09.324+02:00  INFO 2912 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:03:09.379+02:00  INFO 2912 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:03:09.379+02:00  INFO 2912 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:03:10.321+02:00  INFO 2912 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:03:10.397+02:00  INFO 2912 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:03:10.990+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:03:11.007+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:03:11.008+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:03:11.075+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:03:11.076+02:00  INFO 2912 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1696 ms
+2025-07-24T12:03:11.238+02:00  INFO 2912 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:03:11.701+02:00  INFO 2912 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@950087e
+2025-07-24T12:03:11.703+02:00  INFO 2912 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:03:11.758+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:03:11.821+02:00  INFO 2912 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:03:11.866+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:03:12.235+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:03:12.360+02:00  INFO 2912 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:03:13.411+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:03:13.443+02:00  INFO 2912 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:03:14.035+02:00  WARN 2912 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:03:14.532+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:03:14.578+02:00  INFO 2912 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:03:14.589+02:00  INFO 2912 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.786 seconds (process running for 6.666)
+2025-07-24T12:03:16.806+02:00  INFO 2912 --- [projectJPA] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:03:16.811+02:00  INFO 2912 --- [projectJPA] [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:03:16.821+02:00  INFO 2912 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:03:16.825+02:00  INFO 2912 --- [projectJPA] [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:03:16.830+02:00  INFO 2912 --- [projectJPA] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:03:16.841+02:00  INFO 2912 --- [projectJPA] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:03:19.656+02:00  INFO 12764 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 12764 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:03:19.659+02:00 DEBUG 12764 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:03:19.660+02:00  INFO 12764 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:03:19.714+02:00  INFO 12764 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:03:19.715+02:00  INFO 12764 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:03:20.645+02:00  INFO 12764 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:03:20.721+02:00  INFO 12764 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:03:21.270+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:03:21.287+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:03:21.288+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:03:21.355+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:03:21.356+02:00  INFO 12764 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1640 ms
+2025-07-24T12:03:21.518+02:00  INFO 12764 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:03:21.950+02:00  INFO 12764 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33263577
+2025-07-24T12:03:21.953+02:00  INFO 12764 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:03:22.008+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:03:22.093+02:00  INFO 12764 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:03:22.135+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:03:22.473+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:03:22.599+02:00  INFO 12764 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:03:23.637+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:03:23.670+02:00  INFO 12764 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:03:24.251+02:00  WARN 12764 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:03:24.812+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:03:24.860+02:00  INFO 12764 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:03:24.871+02:00  INFO 12764 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.741 seconds (process running for 6.602)
+2025-07-24T12:03:25.378+02:00  INFO 12764 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T12:03:25.378+02:00  INFO 12764 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T12:03:25.380+02:00  INFO 12764 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T12:18:25.950+02:00  INFO 12764 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:18:25.955+02:00  INFO 12764 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:18:25.963+02:00  INFO 12764 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:18:25.970+02:00  INFO 12764 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:18:25.974+02:00  INFO 12764 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:18:25.986+02:00  INFO 12764 --- [projectJPA] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:18:28.846+02:00  INFO 19316 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 19316 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:18:28.849+02:00 DEBUG 19316 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:18:28.851+02:00  INFO 19316 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:18:28.907+02:00  INFO 19316 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:18:28.909+02:00  INFO 19316 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:18:29.886+02:00  INFO 19316 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:18:29.960+02:00  INFO 19316 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:18:30.511+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:18:30.528+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:18:30.529+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:18:30.595+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:18:30.595+02:00  INFO 19316 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1686 ms
+2025-07-24T12:18:30.757+02:00  INFO 19316 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:18:31.219+02:00  INFO 19316 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7662ef50
+2025-07-24T12:18:31.222+02:00  INFO 19316 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:18:31.277+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:18:31.344+02:00  INFO 19316 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:18:31.390+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:18:31.727+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:18:31.855+02:00  INFO 19316 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:18:32.839+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:18:32.869+02:00  INFO 19316 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:18:33.397+02:00  WARN 19316 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:18:33.902+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:18:33.949+02:00  INFO 19316 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:18:33.962+02:00  INFO 19316 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.636 seconds (process running for 6.607)
+2025-07-24T12:18:39.875+02:00  INFO 19316 --- [projectJPA] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T12:18:39.876+02:00  INFO 19316 --- [projectJPA] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T12:18:39.878+02:00  INFO 19316 --- [projectJPA] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T12:18:40.720+02:00  INFO 19316 --- [projectJPA] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 322 ms
+2025-07-24T12:22:25.557+02:00 DEBUG 19316 --- [projectJPA] [http-nio-8080-exec-4] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, nome=Ivano, cognome=Di Gese, codiceFiscale=DGSVNI95C12H501Z, email=ivanodg@gmail.com)
+2025-07-24T12:25:42.914+02:00  INFO 19316 --- [projectJPA] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:25:42.919+02:00  INFO 19316 --- [projectJPA] [RMI TCP Connection(10)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:25:42.928+02:00  INFO 19316 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:25:42.934+02:00  INFO 19316 --- [projectJPA] [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:25:42.938+02:00  INFO 19316 --- [projectJPA] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:25:42.948+02:00  INFO 19316 --- [projectJPA] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:25:45.875+02:00  INFO 8896 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 8896 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:25:45.877+02:00 DEBUG 8896 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:25:45.879+02:00  INFO 8896 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:25:45.944+02:00  INFO 8896 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:25:45.944+02:00  INFO 8896 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:25:46.906+02:00  INFO 8896 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:25:46.984+02:00  INFO 8896 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:25:47.628+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:25:47.644+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:25:47.645+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:25:47.707+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:25:47.708+02:00  INFO 8896 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1762 ms
+2025-07-24T12:25:47.866+02:00  INFO 8896 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:25:48.309+02:00  INFO 8896 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7662ef50
+2025-07-24T12:25:48.312+02:00  INFO 8896 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:25:48.364+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:25:48.432+02:00  INFO 8896 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:25:48.477+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:25:48.821+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:25:48.951+02:00  INFO 8896 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:25:49.954+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:25:49.984+02:00  INFO 8896 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:25:50.512+02:00  WARN 8896 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:25:51.017+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:25:51.105+02:00  INFO 8896 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:25:51.117+02:00  INFO 8896 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.768 seconds (process running for 6.71)
+2025-07-24T12:26:43.718+02:00  INFO 8896 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:26:43.722+02:00  INFO 8896 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:26:43.730+02:00  INFO 8896 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:26:43.736+02:00  INFO 8896 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:26:43.741+02:00  INFO 8896 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:26:43.751+02:00  INFO 8896 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:26:46.388+02:00  INFO 1820 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 1820 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:26:46.390+02:00 DEBUG 1820 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:26:46.392+02:00  INFO 1820 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:26:46.455+02:00  INFO 1820 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:26:46.455+02:00  INFO 1820 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:26:47.376+02:00  INFO 1820 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:26:47.451+02:00  INFO 1820 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:26:47.986+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:26:48.004+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:26:48.005+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:26:48.069+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:26:48.070+02:00  INFO 1820 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1614 ms
+2025-07-24T12:26:48.229+02:00  INFO 1820 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:26:48.657+02:00  INFO 1820 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e20c24e
+2025-07-24T12:26:48.661+02:00  INFO 1820 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:26:48.710+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:26:48.771+02:00  INFO 1820 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:26:48.820+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:26:49.160+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:26:49.282+02:00  INFO 1820 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:26:50.269+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:26:50.299+02:00  INFO 1820 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:26:50.834+02:00  WARN 1820 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:26:51.344+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:26:51.390+02:00  INFO 1820 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:26:51.401+02:00  INFO 1820 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.539 seconds (process running for 6.395)
+2025-07-24T12:26:53.753+02:00  INFO 1820 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T12:26:53.755+02:00  INFO 1820 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T12:26:53.757+02:00  INFO 1820 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T12:26:54.621+02:00  INFO 1820 --- [projectJPA] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 343 ms
+2025-07-24T12:27:42.257+02:00 DEBUG 1820 --- [projectJPA] [http-nio-8080-exec-10] c.b.j.s.implementations.CertificatoImpl  : Creata: CertificatoRequest(id=null, tipo=true, dataCertificato=2026-06-22, socioId=8)
+2025-07-24T12:42:47.392+02:00  INFO 1820 --- [projectJPA] [RMI TCP Connection(19)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:42:47.396+02:00  INFO 1820 --- [projectJPA] [RMI TCP Connection(19)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:42:47.404+02:00  INFO 1820 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:42:47.409+02:00  INFO 1820 --- [projectJPA] [RMI TCP Connection(19)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:42:47.414+02:00  INFO 1820 --- [projectJPA] [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:42:47.424+02:00  INFO 1820 --- [projectJPA] [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:42:50.336+02:00  INFO 1496 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 1496 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:42:50.339+02:00 DEBUG 1496 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:42:50.340+02:00  INFO 1496 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:42:50.397+02:00  INFO 1496 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:42:50.397+02:00  INFO 1496 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:42:51.389+02:00  INFO 1496 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:42:51.465+02:00  INFO 1496 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:42:52.020+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:42:52.089+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:42:52.089+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:42:52.158+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:42:52.159+02:00  INFO 1496 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1761 ms
+2025-07-24T12:42:52.322+02:00  INFO 1496 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:42:52.791+02:00  INFO 1496 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bc81977
+2025-07-24T12:42:52.794+02:00  INFO 1496 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:42:52.846+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:42:52.910+02:00  INFO 1496 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:42:52.961+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:42:53.330+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:42:53.459+02:00  INFO 1496 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:42:54.519+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:42:54.551+02:00  INFO 1496 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:42:55.107+02:00  WARN 1496 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:42:55.631+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:42:55.678+02:00  INFO 1496 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:42:55.689+02:00  INFO 1496 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.863 seconds (process running for 6.744)
+2025-07-24T12:42:55.776+02:00  INFO 1496 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T12:42:55.776+02:00  INFO 1496 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T12:42:55.778+02:00  INFO 1496 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T12:42:56.489+02:00  INFO 1496 --- [projectJPA] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 291 ms
+2025-07-24T12:43:31.919+02:00 DEBUG 1496 --- [projectJPA] [http-nio-8080-exec-1] c.b.j.s.implementations.SocioImpl        : delete :SocioReq(id=7, nome=Alberto, cognome=Nero, codiceFiscale=9999999999, email=a.nero@t.it)
+2025-07-24T12:46:00.108+02:00 DEBUG 1496 --- [projectJPA] [http-nio-8080-exec-8] c.b.j.s.implementations.CertificatoImpl  : Creata: CertificatoRequest(id=0, tipo=false, dataCertificato=2025-04-21, socioId=8)
+2025-07-24T12:46:00.815+02:00  WARN 1496 --- [projectJPA] [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2025-07-24T12:46:00.815+02:00 ERROR 1496 --- [projectJPA] [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '8' for key 'certificato_medico.UKfh7x211m11apxus0ygp7io1of'
+2025-07-24T12:46:56.263+02:00  INFO 1496 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T12:46:56.267+02:00  INFO 1496 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T12:46:56.275+02:00  INFO 1496 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T12:46:56.281+02:00  INFO 1496 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:46:56.285+02:00  INFO 1496 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T12:46:56.294+02:00  INFO 1496 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T12:46:59.007+02:00  INFO 16536 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 16536 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T12:46:59.010+02:00 DEBUG 16536 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T12:46:59.011+02:00  INFO 16536 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T12:46:59.080+02:00  INFO 16536 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T12:46:59.080+02:00  INFO 16536 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T12:47:00.030+02:00  INFO 16536 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T12:47:00.109+02:00  INFO 16536 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2025-07-24T12:47:00.705+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T12:47:00.723+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T12:47:00.724+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T12:47:00.792+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T12:47:00.792+02:00  INFO 16536 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1711 ms
+2025-07-24T12:47:00.980+02:00  INFO 16536 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T12:47:01.438+02:00  INFO 16536 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f8bd007
+2025-07-24T12:47:01.441+02:00  INFO 16536 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T12:47:01.492+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T12:47:01.555+02:00  INFO 16536 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T12:47:01.601+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T12:47:01.941+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T12:47:02.060+02:00  INFO 16536 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T12:47:03.083+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T12:47:03.113+02:00  INFO 16536 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T12:47:03.641+02:00  WARN 16536 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T12:47:04.192+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T12:47:04.301+02:00  INFO 16536 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T12:47:04.314+02:00  INFO 16536 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.82 seconds (process running for 6.686)
+2025-07-24T12:47:04.590+02:00  INFO 16536 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T12:47:04.590+02:00  INFO 16536 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T12:47:04.593+02:00  INFO 16536 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T12:47:05.476+02:00  INFO 16536 --- [projectJPA] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 297 ms
+2025-07-24T14:35:13.452+02:00  WARN 16536 --- [projectJPA] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h41m41s801ms980µs100ns).
+2025-07-24T14:47:46.259+02:00  INFO 16536 --- [projectJPA] [RMI TCP Connection(26)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T14:47:46.264+02:00  INFO 16536 --- [projectJPA] [RMI TCP Connection(26)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T14:47:46.273+02:00  INFO 16536 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T14:47:46.280+02:00  INFO 16536 --- [projectJPA] [RMI TCP Connection(26)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T14:47:46.286+02:00  INFO 16536 --- [projectJPA] [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T14:47:46.295+02:00  INFO 16536 --- [projectJPA] [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T14:47:49.407+02:00  INFO 8500 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 8500 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T14:47:49.410+02:00 DEBUG 8500 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T14:47:49.411+02:00  INFO 8500 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T14:47:49.479+02:00  INFO 8500 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T14:47:49.479+02:00  INFO 8500 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T14:47:50.461+02:00  INFO 8500 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T14:47:50.542+02:00  INFO 8500 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2025-07-24T14:47:51.101+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T14:47:51.120+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T14:47:51.120+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T14:47:51.196+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T14:47:51.197+02:00  INFO 8500 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1717 ms
+2025-07-24T14:47:51.362+02:00  INFO 8500 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T14:47:51.801+02:00  INFO 8500 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ab81b05
+2025-07-24T14:47:51.803+02:00  INFO 8500 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T14:47:51.854+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T14:47:51.925+02:00  INFO 8500 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T14:47:51.972+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T14:47:52.333+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T14:47:52.460+02:00  INFO 8500 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T14:47:53.618+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T14:47:53.652+02:00  INFO 8500 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T14:47:54.205+02:00  WARN 8500 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T14:47:54.727+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T14:47:54.777+02:00  INFO 8500 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T14:47:54.791+02:00  INFO 8500 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.903 seconds (process running for 6.855)
+2025-07-24T14:49:18.202+02:00  INFO 8500 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T14:49:18.207+02:00  INFO 8500 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T14:49:18.216+02:00  INFO 8500 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T14:49:18.221+02:00  INFO 8500 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T14:49:18.226+02:00  INFO 8500 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T14:49:18.236+02:00  INFO 8500 --- [projectJPA] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T14:49:21.050+02:00  INFO 3256 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 3256 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T14:49:21.053+02:00 DEBUG 3256 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T14:49:21.054+02:00  INFO 3256 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T14:49:21.109+02:00  INFO 3256 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T14:49:21.110+02:00  INFO 3256 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T14:49:22.044+02:00  INFO 3256 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T14:49:22.159+02:00  INFO 3256 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-07-24T14:49:22.691+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T14:49:22.707+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T14:49:22.708+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T14:49:22.768+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T14:49:22.768+02:00  INFO 3256 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1658 ms
+2025-07-24T14:49:22.924+02:00  INFO 3256 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T14:49:23.379+02:00  INFO 3256 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57cbb18e
+2025-07-24T14:49:23.381+02:00  INFO 3256 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T14:49:23.438+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T14:49:23.507+02:00  INFO 3256 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T14:49:23.552+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T14:49:23.901+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T14:49:24.029+02:00  INFO 3256 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T14:49:25.044+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T14:49:25.074+02:00  INFO 3256 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T14:49:25.672+02:00  WARN 3256 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T14:49:26.233+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T14:49:26.281+02:00  INFO 3256 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T14:49:26.294+02:00  INFO 3256 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.768 seconds (process running for 6.687)
+2025-07-24T14:49:27.366+02:00  INFO 3256 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T14:49:27.367+02:00  INFO 3256 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T14:49:27.368+02:00  INFO 3256 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-24T14:49:28.155+02:00  INFO 3256 --- [projectJPA] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 325 ms
+2025-07-24T14:52:19.893+02:00 DEBUG 3256 --- [projectJPA] [http-nio-8080-exec-2] c.b.j.s.implementations.SocioImpl        : Update: SocioReq(id=8, nome=Antonio, cognome=Giannasca, codiceFiscale=GNNTNA90L05F839Y, email=antonio.giannasca@labforweb.it)
+2025-07-24T14:53:29.233+02:00  WARN 3256 --- [projectJPA] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
+2025-07-24T14:54:01.813+02:00  WARN 3256 --- [projectJPA] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
+2025-07-24T14:54:10.599+02:00 DEBUG 3256 --- [projectJPA] [http-nio-8080-exec-1] c.b.j.s.implementations.SocioImpl        : Update: SocioReq(id=8, nome=null, cognome=Di gese, codiceFiscale=DGSNTN88S18A662U, email=null)
+2025-07-24T14:58:29.649+02:00  INFO 3256 --- [projectJPA] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T14:58:29.653+02:00  INFO 3256 --- [projectJPA] [RMI TCP Connection(11)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T14:58:29.661+02:00  INFO 3256 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T14:58:29.666+02:00  INFO 3256 --- [projectJPA] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T14:58:29.671+02:00  INFO 3256 --- [projectJPA] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T14:58:29.680+02:00  INFO 3256 --- [projectJPA] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T14:58:32.761+02:00  INFO 2172 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 2172 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T14:58:32.764+02:00 DEBUG 2172 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T14:58:32.765+02:00  INFO 2172 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T14:58:32.821+02:00  INFO 2172 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T14:58:32.822+02:00  INFO 2172 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T14:58:33.769+02:00  INFO 2172 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T14:58:33.845+02:00  INFO 2172 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2025-07-24T14:58:34.405+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T14:58:34.423+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T14:58:34.423+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T14:58:34.489+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T14:58:34.490+02:00  INFO 2172 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1666 ms
+2025-07-24T14:58:34.647+02:00  INFO 2172 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T14:58:35.084+02:00  INFO 2172 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e555c65
+2025-07-24T14:58:35.087+02:00  INFO 2172 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T14:58:35.136+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T14:58:35.202+02:00  INFO 2172 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T14:58:35.248+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T14:58:35.588+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T14:58:35.719+02:00  INFO 2172 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T14:58:36.730+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T14:58:36.764+02:00  INFO 2172 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T14:58:37.312+02:00  WARN 2172 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T14:58:37.813+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T14:58:37.859+02:00  INFO 2172 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T14:58:37.870+02:00  INFO 2172 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.623 seconds (process running for 6.517)
+2025-07-24T14:58:39.458+02:00  INFO 2172 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T14:58:39.459+02:00  INFO 2172 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T14:58:39.461+02:00  INFO 2172 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T14:58:40.364+02:00  INFO 2172 --- [projectJPA] [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 332 ms
+2025-07-24T14:59:54.147+02:00  INFO 2172 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T14:59:54.152+02:00  INFO 2172 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T14:59:54.159+02:00  INFO 2172 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T14:59:54.165+02:00  INFO 2172 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T14:59:54.170+02:00  INFO 2172 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T14:59:54.183+02:00  INFO 2172 --- [projectJPA] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-24T14:59:57.043+02:00  INFO 6584 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.7 with PID 6584 (C:\Users\Ho\eclipse-workspace\Betacom\projectJPA\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\Betacom\projectJPA)
+2025-07-24T14:59:57.047+02:00 DEBUG 6584 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.4.8-SNAPSHOT, Spring v6.2.9
+2025-07-24T14:59:57.047+02:00  INFO 6584 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-24T14:59:57.105+02:00  INFO 6584 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-24T14:59:57.105+02:00  INFO 6584 --- [projectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-24T14:59:58.036+02:00  INFO 6584 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-24T14:59:58.111+02:00  INFO 6584 --- [projectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2025-07-24T14:59:58.713+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-24T14:59:58.730+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-24T14:59:58.731+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-24T14:59:58.796+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-24T14:59:58.797+02:00  INFO 6584 --- [projectJPA] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1691 ms
+2025-07-24T14:59:58.958+02:00  INFO 6584 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-24T14:59:59.425+02:00  INFO 6584 --- [projectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ac9bae5
+2025-07-24T14:59:59.429+02:00  INFO 6584 --- [projectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-24T14:59:59.482+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-24T14:59:59.548+02:00  INFO 6584 --- [projectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-24T14:59:59.592+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-24T14:59:59.934+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-24T15:00:00.063+02:00  INFO 6584 --- [projectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.42
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-24T15:00:01.100+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-24T15:00:01.132+02:00  INFO 6584 --- [projectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T15:00:01.733+02:00  WARN 6584 --- [projectJPA] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-24T15:00:02.223+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-24T15:00:02.274+02:00  INFO 6584 --- [projectJPA] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-24T15:00:02.284+02:00  INFO 6584 --- [projectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.799 seconds (process running for 6.697)
+2025-07-24T15:00:02.586+02:00  INFO 6584 --- [projectJPA] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24T15:00:02.586+02:00  INFO 6584 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-24T15:00:02.588+02:00  INFO 6584 --- [projectJPA] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-24T15:00:03.218+02:00  INFO 6584 --- [projectJPA] [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 336 ms
+2025-07-24T15:01:09.716+02:00 DEBUG 6584 --- [projectJPA] [http-nio-8080-exec-7] c.b.j.s.implementations.CertificatoImpl  : Update: CertificatoRequest(id=4, tipo=true, dataCertificato=2025-06-22, socioId=5)
+2025-07-24T15:49:35.796+02:00  WARN 6584 --- [projectJPA] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m35s688ms331µs900ns).
+2025-07-24T15:58:41.719+02:00  INFO 6584 --- [projectJPA] [RMI TCP Connection(52)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-24T15:58:41.773+02:00  INFO 6584 --- [projectJPA] [RMI TCP Connection(52)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24T15:58:41.781+02:00  INFO 6584 --- [projectJPA] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-24T15:58:41.787+02:00  INFO 6584 --- [projectJPA] [RMI TCP Connection(52)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-24T15:58:41.791+02:00  INFO 6584 --- [projectJPA] [RMI TCP Connection(52)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-24T15:58:41.798+02:00  INFO 6584 --- [projectJPA] [RMI TCP Connection(52)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

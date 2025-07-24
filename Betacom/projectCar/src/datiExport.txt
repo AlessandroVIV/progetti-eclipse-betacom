@@ -1,0 +1,4 @@
+add:Macchina,4,benzina,strada,giallo,Fiat,1990,Panda,3,EL123GX,1200
+add:Moto,2,benzina,strada,rosso,Yamaha,2010,StreetRider 500,EL222BB,900
+add:Bici,2,manuale,ciclabile,blu,B1,1990,CityCruiser,4,senza,false
+export:C:\Users\Ho\eclipse-workspace\Betacom\projectCar\src\veicoli.json

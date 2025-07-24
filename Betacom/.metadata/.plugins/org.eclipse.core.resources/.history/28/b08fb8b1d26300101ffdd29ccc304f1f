@@ -1,0 +1,95 @@
+package com.betacom.car.utilities;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.betacom.car.singletone.SQLConfiguration;
+
+public class Utils {
+
+	public static List<String> readRecord(String path){
+		
+		List<String> r = new ArrayList<String>();
+		
+		try (BufferedReader reader = new BufferedReader(new FileReader(path))){
+			String line = reader.readLine();
+			while (line != null) {
+				r.add(line);
+				line = reader.readLine();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return r;
+		
+	}
+	
+	public static LocalDate dateToLocalDate(Object value) {
+		
+	    if (value == null) return null;
+
+	    if (value instanceof java.sql.Date) {
+	        return ((java.sql.Date) value).toLocalDate();
+	    } else if (value instanceof java.util.Date) {
+	        return ((java.util.Date) value).toInstant()
+	                                       .atZone(ZoneId.systemDefault())
+	                                       .toLocalDate();
+	    } else if (value instanceof String) {
+	        return LocalDate.parse((String) value); // assume formato yyyy-MM-dd
+	    } else {
+	        System.err.println("Tipo non gestito: " + value.getClass());
+	        return null;
+	    }
+			
+	} 
+	
+	public static int getIdFromValue(String tableName, String columnName, String value) throws Exception {
+		
+		Connection conn = SQLConfiguration.getInstance().getConnection();
+		
+		String sql = "SELECT id_" + tableName + " FROM " + tableName + " WHERE " + columnName + " = ?";
+		
+		try (PreparedStatement ps = conn.prepareStatement(sql)) {
+			
+			ps.setString(1, value);
+			ResultSet rs = ps.executeQuery();
+			
+			if (rs.next()) {
+				return rs.getInt(1); // mi ritorna l'id
+			} else {
+				throw new Exception("Valore non trovato nella tabella: " + tableName + " per valore: " + value);
+			}
+			
+		}
+		
+	}
+	
+	public static int getIdVeicoloByTipo(String tipo, int idTipo) throws Exception {
+		String colonna = switch (tipo) {
+			case "macchina" -> "id_macchina";
+			case "moto" -> "id_moto";
+			case "bici" -> "id_bici";
+			default -> throw new IllegalArgumentException("Tipo non valido");
+		};
+
+		String query = "SELECT id_veicolo FROM " + tipo + " WHERE " + colonna + " = ?";
+		try (PreparedStatement ps = SQLConfiguration.getInstance().getConnection().prepareStatement(query)) {
+			ps.setInt(1, idTipo);
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()) {
+				return rs.getInt("id_veicolo");
+			} else {
+				return -1;
+			}
+		}
+	}
+
+
+}

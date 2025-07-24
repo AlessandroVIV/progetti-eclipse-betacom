@@ -1,0 +1,23 @@
+package com.betacom.jpa.services.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.betacom.jpa.repositories.ISocioRepository;
+import com.betacom.jpa.requests.SocioReq;
+import com.betacom.jpa.services.interfaces.ISocioServices;
+
+@Service
+public class SocioImpl implements ISocioServices{
+
+	@Autowired
+	private ISocioRepository socioRepository;
+
+	@Override
+	public void insert(SocioReq req) {
+		
+		System.out.println("Insert: " + req.toString());
+		
+	}
+	
+}

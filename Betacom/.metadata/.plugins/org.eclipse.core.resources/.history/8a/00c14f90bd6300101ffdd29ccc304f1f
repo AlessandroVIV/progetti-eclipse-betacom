@@ -1,0 +1,20 @@
+veicoli=select * from veicolo
+bici=select * from bici
+macchina=select * from macchina
+moto=select * from moto
+veicoli.colore=select * from veicolo where id_colore = ?
+
+insert_bici = insert into bici (numeroMarce, id_sospensione, pieghevole) values (?, ?, ?)
+insert_macchina = insert into macchina (numeroPorte, targa, cc) values (?, ?, ?)
+insert_moto = insert into moto (targa, cc) VALUES (?, ?)
+insert_veicolo = insert into veicolo (annoProduzione, id_numeroRuote, id_alimentazione, id_categoria, id_colore, id_marca, id_modello, id_macchina, id_moto, id_bici) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+update_veicolo = update veicolo set annoProduzione = ?, id_colore = ? where id_veicolo = ?
+update_bici = update bici set numeroMarce = ?, id_sospensione = ?, pieghevole = ? where id_bici = ?
+update_macchina = update macchina set numeroPorte = ?, targa = ?, cc = ? where id_macchina = ?
+update_moto = update moto set targa = ?, cc = ? where id_moto = ?
+
+delete_veicolo = delete from veicolo where id_veicolo = ?
+delete_bici = delete from bici where id_bici = ?
+delete_macchina = delete from macchina where id_macchina = ?
+delete_moto = delete from moto where id_moto = ?

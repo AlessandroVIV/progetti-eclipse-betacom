@@ -1,0 +1,11 @@
+package com.betacom.jpa.services;
+
+import com.betacom.jpa.requests.SocioReq;
+
+public interface ISocioServices {
+
+	void insert(SocioReq req);
+	
+	
+	
+}

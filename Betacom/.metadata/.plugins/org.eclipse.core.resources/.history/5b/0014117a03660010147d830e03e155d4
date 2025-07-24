@@ -1,0 +1,75 @@
+package com.betacom.sb.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+import com.betacom.sb.models.Uffici;
+
+@Repository
+public class UfficiDAO {
+
+	// private final JdbcTemplate jdbcTemplate;
+	private final NamedParameterJdbcTemplate jdbcTemplate; // Definisce il template con il nome dei parametri
+	
+	@Autowired
+	public UfficiDAO(DataSource dataSource) {
+		// this.jdbcTemplate = new JdbcTemplate(dataSource); // Carica il template col datasource
+		this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+	}
+	
+	public List<Uffici> getUffici(){
+		return jdbcTemplate.query("select * from uffici", BeanPropertyRowMapper.newInstance(Uffici.class));
+	}
+	
+	public List<Uffici> getUfficioById(Integer id){
+		
+		SqlParameterSource param = new MapSqlParameterSource("id", id);
+		String sql = "select * from uffici where id_ufficio = :id";
+		
+		return jdbcTemplate.query(sql, param, BeanPropertyRowMapper.newInstance(Uffici.class));
+	}
+	
+	@Transactional (rollbackFor = Exception.class)
+	public int addUfficio(String nome) {
+		
+		String sql = "insert into uffici (nome_ufficio) values (:nome)";
+		SqlParameterSource param = new MapSqlParameterSource("nome", nome);
+		
+		int i = jdbcTemplate.update(sql, param);
+
+		return i;
+		
+	}
+	
+	@Transactional (rollbackFor = Exception.class)
+	public int updateUfficio(Integer id, String nome) {
+		
+		String sql = "update uffici set nome_ufficio = :nome where id_ufficio = :id";
+		
+		SqlParameterSource param = new MapSqlParameterSource()
+				.addValue("id", id)
+				.addValue("nome", nome);
+		
+		return jdbcTemplate.update(sql, param);
+		
+	}
+	
+	@Transactional (rollbackFor = Exception.class)
+	public int deleteUfficio(Integer id) {
+		
+		String sql = "delete from uffici where id_ufficio = :id";
+		
+		SqlParameterSource param = new MapSqlParameterSource("id", id);
+		
+		return jdbcTemplate.update(sql, param);
+		
+	}
+	
+}

@@ -1,0 +1,26 @@
+package com.betacom.sb.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.betacom.sb.models.Moto;
+
+@Repository
+public class MacchinaDAO {
+
+	private final NamedParameterJdbcTemplate jdbcTemplate;
+	
+	public MacchinaDAO(DataSource dataSource) {
+		this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+	}
+	
+	public List<Moto> findAllMoto(){
+		return jdbcTemplate.query("select * from moto", BeanPropertyRowMapper.newInstance(Moto.class));
+	}
+	
+}

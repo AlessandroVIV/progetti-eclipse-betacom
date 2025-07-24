@@ -1,0 +1,43 @@
+[
+  {
+    "numeroPorte": 3,
+    "Targa": "EL123GX",
+    "cc": 1200,
+    "id": 1,
+    "tipoVeicolo": "Macchina",
+    "numeroRuote": 4,
+    "tipoAlimentazione": "benzina",
+    "categoria": "strada",
+    "colore": "giallo",
+    "marca": "Fiat",
+    "annoProduzione": 1990,
+    "modello": "Panda"
+  },
+  {
+    "targa": "900",
+    "cc": 900,
+    "id": 2,
+    "tipoVeicolo": "Moto",
+    "numeroRuote": 2,
+    "tipoAlimentazione": "benzina",
+    "categoria": "strada",
+    "colore": "rosso",
+    "marca": "Yamaha",
+    "annoProduzione": 2010,
+    "modello": "StreetRider 500"
+  },
+  {
+    "numeroMarce": 4,
+    "tipoSospensione": "senza",
+    "pieghevole": false,
+    "id": 3,
+    "tipoVeicolo": "Bici",
+    "numeroRuote": 2,
+    "tipoAlimentazione": "manuale",
+    "categoria": "ciclabile",
+    "colore": "blu",
+    "marca": "B1",
+    "annoProduzione": 1990,
+    "modello": "CityCruiser"
+  }
+]

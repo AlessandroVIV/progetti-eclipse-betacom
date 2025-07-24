@@ -1,0 +1,79 @@
+package com.betacom.car.process;
+
+import java.util.List;
+
+import com.betacom.car.dao.BiciDAO;
+import com.betacom.car.dao.MacchinaDAO;
+import com.betacom.car.dao.MotoDAO;
+import com.betacom.car.dao.VeicoloDAO;
+import com.betacom.car.models.Veicolo;
+
+public class VeicoliProcess {
+
+    private final VeicoloDAO daoV = new VeicoloDAO();
+    private final MacchinaDAO daoM = new MacchinaDAO();
+    private final MotoDAO daoMo = new MotoDAO();
+    private final BiciDAO daoB = new BiciDAO();
+    
+    FileProcess lettura = new FileProcess();
+
+    public void handleAdd(String line) {
+        try {
+            String[] p = line.split(",");
+            String tipo = p[0].toLowerCase();
+
+            if (tipo.equals("macchina")) {
+                // Esempio riga:
+                // macchina,4,benzina,strada,bianca,renault,2024,Clio,3,EL123GZ,1200
+
+                int numeroPorte = Integer.parseInt(p[1]);
+                String alimentazione = p[2];
+                String categoria = p[3];
+                String colore = p[4];
+                String marca = p[5];
+                int annoProduzione = Integer.parseInt(p[6]);
+                String modello = p[7];
+                int numeroRuote = Integer.parseInt(p[8]);
+                String targa = p[9];
+                int cilindrata = Integer.parseInt(p[10]);
+
+                // Step 1: Inserisci in macchina
+                Object[] macchinaParams = {
+                    numeroPorte,
+                    targa,
+                    cilindrata
+                };
+                int idMacchina = daoM.insert("insert_macchina", macchinaParams);
+
+                // Step 2: Inserisci in veicolo con le FK risolte
+                Object[] veicoloParams = {
+                    annoProduzione,
+                    resolveId("numeroruote", numeroRuote),
+                    resolveId("alimentazione", alimentazione),
+                    resolveId("categoria", categoria),
+                    resolveId("colore", colore),
+                    resolveId("marca", marca),
+                    resolveId("modello", modello),
+                    idMacchina, // id_macchina
+                    null,       // id_moto
+                    null        // id_bici
+                };
+
+                int idVeicolo = daoV.insert("insert_veicolo", veicoloParams);
+                System.out.println("✅ Macchina aggiunta con ID veicolo: " + idVeicolo);
+            }
+
+        } catch (Exception e) {
+            System.out.println("❌ Errore in handleAdd: " + e.getMessage());
+        }
+    }
+
+
+    private int resolveId(String tabella, String valore) throws Exception {
+        // Esempio fittizio: SELECT id FROM colore WHERE nome = 'bianca'
+        // Lo implementi tu in base alla tua struttura
+        // Per ora ti consiglio di usare mappature statiche in un Map<String, Integer>
+        return 1;
+    }
+	
+}

@@ -1,0 +1,63 @@
+package com.betacom.car.process;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.betacom.car.exception.AcademyException;
+import com.betacom.car.singletone.SQLConfiguration;
+
+public class StartVeicolo {
+
+    public boolean execute(String filePath) {
+
+        System.out.println("🚀 Begin StartVeicolo");
+        boolean rc = true;
+
+        try {
+            // Connessione al DB
+            SQLConfiguration.getInstance().getConnection();
+            SQLConfiguration.getInstance().setAutoCommit();
+            System.out.println("\n✅ Connessione aperta!\n");
+
+            // Leggi il file riga per riga
+            List<String> comandi = leggiFile(filePath);
+
+            // Processa ogni riga
+            VeicoloService service = new VeicoloService();
+
+            for (String comando : comandi) {
+                comando = comando.trim();
+
+                if (comando.isEmpty() || comando.startsWith("#")) continue;
+
+                if (comando.startsWith("add:")) {
+                    service.handleAdd(comando.substring(4));
+                } else if (comando.startsWith("update:")) {
+                    service.handleUpdate(comando.substring(7));
+                } else if (comando.startsWith("delete:")) {
+                    service.handleDelete(comando.substring(7));
+                } else if (comando.equalsIgnoreCase("list")) {
+                    service.handleList();
+                } else {
+                    System.out.println("❌ Comando non riconosciuto: " + comando);
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println("❌ Errore generale: " + e.getMessage());
+            rc = false;
+        }
+
+        try {
+            SQLConfiguration.getInstance().closeConnection();
+            System.out.println("\n🔒 Connessione chiusa!");
+        } catch (AcademyException e) {
+            System.out.println("❌ Errore chiusura connessione: " + e.getMessage());
+        }
+
+        return rc;
+    }
+    
+}

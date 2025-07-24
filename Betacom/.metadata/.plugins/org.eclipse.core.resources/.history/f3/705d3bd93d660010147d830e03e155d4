@@ -1,0 +1,134 @@
+package com.betacom.sb.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.betacom.sb.models.Veicolo;
+
+@Repository
+public class VeicoloDAO {
+
+	private final NamedParameterJdbcTemplate jdbcTemplate;
+	private final ColoreDAO coloreDAO;
+	private final CategoriaDAO categoriaDAO;
+	private final AlimentazioneDAO alimentazioneDAO;
+	private final MarcaDAO marcaDAO;
+	private final ModelloDAO modelloDAO;
+	private final NumeroRuoteDAO numeroRuoteDAO;
+	private final SospensioneDAO sospensioneDAO;
+	private final MacchinaDAO macchinaDAO;
+
+	public VeicoloDAO(
+		    DataSource dataSource,
+		    ColoreDAO coloreDAO,
+		    CategoriaDAO categoriaDAO,
+		    AlimentazioneDAO alimentazioneDAO,
+		    MarcaDAO marcaDAO,
+		    ModelloDAO modelloDAO,
+		    NumeroRuoteDAO numeroRuoteDAO,
+		    SospensioneDAO sospensioneDAO,
+		    MacchinaDAO macchinaDAO
+		) {
+			this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource); 
+		    this.coloreDAO = coloreDAO;
+		    this.categoriaDAO = categoriaDAO;
+		    this.alimentazioneDAO = alimentazioneDAO;
+		    this.marcaDAO = marcaDAO;
+		    this.modelloDAO = modelloDAO;
+		    this.numeroRuoteDAO = numeroRuoteDAO;
+		    this.sospensioneDAO = sospensioneDAO;
+		    this.macchinaDAO = macchinaDAO;
+		}
+
+	
+	@Transactional (rollbackFor = Exception.class)
+	public List<Veicolo> findAllVeicoli(){
+		return jdbcTemplate.query("select * from veicolo", BeanPropertyRowMapper.newInstance(Veicolo.class));
+	}
+	
+	@Transactional (rollbackFor = Exception.class)
+	public List<Veicolo> getVeicoloById(Integer id){
+		
+		SqlParameterSource param = new MapSqlParameterSource("id", id);
+		
+		String sql = "select * from veicolo where id_veicolo = :id";
+		
+		return jdbcTemplate.query(sql, param, BeanPropertyRowMapper.newInstance(Veicolo.class));
+	}
+	
+	@Transactional(rollbackFor = Exception.class)
+	public void inserisciMacchina(
+			int annoProduzione,
+			int numeroRuote,
+			String alimentazione,
+			String categoria,
+	        String colore,
+	        String marca,
+	        String modello,	        	    
+	        int numeroPorte,
+	        String targa,
+	        int cilindrata
+	) {
+
+		Integer idNumeroRuote = numeroRuoteDAO.getIdByNumeroRuote(numeroRuote);
+		Integer idAlimentazione = alimentazioneDAO.getIdByAlimentazione(alimentazione);
+		Integer idCategoria = categoriaDAO.getIdByCategoria(categoria);
+	    Integer idColore = coloreDAO.getIdByColore(colore);
+	    Integer idMarca = marcaDAO.getIdByMarca(marca);
+	    Integer idModello = modelloDAO.getIdByMarca(modello);
+
+	    KeyHolder keyHolder = new GeneratedKeyHolder();
+	    String sqlVeicolo = """
+	        INSERT INTO veicolo (annoProduzione, id_numeroRuote, id_alimentazione, id_colore)
+	        VALUES (:anno, :ruote, :alimentazione, :colore)
+	    """;
+
+	    MapSqlParameterSource veicoloParams = new MapSqlParameterSource()
+	        .addValue("anno", annoProduzione)
+	        .addValue("ruote", idNumeroRuote)
+	        .addValue("alimentazione", idAlimentazione)
+	        .addValue("colore", idColore);
+
+	    jdbcTemplate.update(sqlVeicolo, veicoloParams, keyHolder, new String[]{"id_veicolo"});
+
+	    Integer idVeicolo = keyHolder.getKey().intValue();
+
+	    // 3. Inserisci nella tabella macchina
+	    macchinaDAO.insertMacchina(numeroPorte, targa, cilindrata, idVeicolo);
+	}
+
+	
+	@Transactional (rollbackFor = Exception.class)
+	public int updateVeicolo(Integer id, String nome) {
+		
+		String sql = "update veicolo set id_alimentazione = :nome where id_veicolo = :id";
+		
+		SqlParameterSource param = new MapSqlParameterSource()
+				.addValue("id", id)
+				.addValue("nome", nome);
+		
+		return jdbcTemplate.update(sql, param);
+		
+	}
+	
+	@Transactional (rollbackFor = Exception.class)
+	public int deleteVeicolo(Integer id) {
+		
+		String sql = "delete from veicolo where id_veicolo = :id";
+		
+		SqlParameterSource param = new MapSqlParameterSource("id", id);
+		
+		return jdbcTemplate.update(sql, param);
+		
+	}
+	
+}

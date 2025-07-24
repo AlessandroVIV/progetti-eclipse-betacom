@@ -1,0 +1,35 @@
+package com.betacom.objects;
+
+public class Negozio {
+
+	private int codice;
+	private String proprietario;
+	private String indirizzo;
+	private boolean inCentroCommerciale;
+	
+	public int getCodice() {
+		return codice;
+	}
+	public void setCodice(int codice) {
+		this.codice = codice;
+	}
+	public String getProprietario() {
+		return proprietario;
+	}
+	public void setProprietario(String proprietario) {
+		this.proprietario = proprietario;
+	}
+	public String getIndirizzo() {
+		return indirizzo;
+	}
+	public void setIndirizzo(String indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+	public boolean isInCentroCommerciale() {
+		return inCentroCommerciale;
+	}
+	public void setInCentroCommerciale(boolean inCentroCommerciale) {
+		this.inCentroCommerciale = inCentroCommerciale;
+	}
+	
+}

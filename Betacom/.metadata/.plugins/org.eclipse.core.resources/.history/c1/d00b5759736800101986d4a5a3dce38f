@@ -1,0 +1,5 @@
+package com.betacom.jpa.response;
+
+public class ResponseBase {
+
+}

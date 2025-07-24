@@ -1,0 +1,28 @@
+package com.betacom.jpa.services.implementations;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.betacom.jpa.exception.AcademyException;
+import com.betacom.jpa.repositories.ICertificatoRepository;
+import com.betacom.jpa.repositories.ISocioRepository;
+import com.betacom.jpa.requests.CertificatoRequest;
+import com.betacom.jpa.services.interfaces.ICertificatoServices;
+
+@Service
+public class CertificatoImpl implements ICertificatoServices{
+
+	@Autowired
+	private ICertificatoRepository certificatoRepository;
+	
+	@Autowired
+	private ISocioRepository socioRepository;
+	
+	@Override
+	public void create(CertificatoRequest req) throws AcademyException {
+
+		
+		
+	}
+	
+}

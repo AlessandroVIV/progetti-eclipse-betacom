@@ -1,0 +1,29 @@
+package com.betacom.sb.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ColoreDAO {
+
+	private final NamedParameterJdbcTemplate jdbcTemplate;
+	
+	public ColoreDAO(DataSource dataSource) {
+		this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+	} 
+	
+	public Integer getIdByColore(String nomeColore) {
+		
+	    String sql = "select id_colore from colore where nome = :nome";
+	    SqlParameterSource param = new MapSqlParameterSource("colore", nomeColore);
+	    
+	    return jdbcTemplate.queryForObject(sql, param, Integer.class);
+	    
+	}
+
+	
+}

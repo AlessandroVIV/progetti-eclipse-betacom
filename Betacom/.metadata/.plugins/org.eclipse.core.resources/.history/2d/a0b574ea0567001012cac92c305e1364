@@ -1,0 +1,12 @@
+package com.betacom.jpa.services.interfaces;
+
+import com.betacom.jpa.exception.AcademyException;
+import com.betacom.jpa.requests.SocioReq;
+
+public interface ISocioServices {
+
+	Integer insert(SocioReq req) throws AcademyException;
+	
+	
+	
+}

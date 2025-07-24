@@ -1,0 +1,25 @@
+package com.betacom.sb.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
+import com.betacom.sb.models.Veicolo;
+
+@Repository
+public class VeicoloDAO {
+
+	private final NamedParameterJdbcTemplate jdbcTemplate;
+
+	public VeicoloDAO(DataSource dataSource) {
+		this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+	}
+	
+	public List<Veicolo> findAllVeicoli(){
+		return jdbcTemplate.query("select * from veicolo", BeanPropertyRowMapper.newInstance(Veicolo.class));
+	}
+	
+}

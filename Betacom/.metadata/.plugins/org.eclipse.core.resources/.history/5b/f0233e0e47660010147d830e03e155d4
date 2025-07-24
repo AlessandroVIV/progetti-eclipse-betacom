@@ -1,0 +1,28 @@
+package com.betacom.sb.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class MarcaDAO {
+
+	private final NamedParameterJdbcTemplate jdbcTemplate;
+	
+	public MarcaDAO(DataSource dataSource) {
+		this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+	} 
+	
+	public Integer getIdByMarca(String nomeMarca) {
+		
+	    String sql = "select id_marca from marca where marca = :nome";
+	    SqlParameterSource param = new MapSqlParameterSource("marca", nomeMarca);
+	    
+	    return jdbcTemplate.queryForObject(sql, param, Integer.class);
+	    
+	}
+	
+}

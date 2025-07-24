@@ -1,0 +1,72 @@
+package com.betacom.jpa.services.implementations;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.betacom.jpa.dto.CertificatoDTO;
+import com.betacom.jpa.dto.SocioDTO;
+import com.betacom.jpa.exception.AcademyException;
+import com.betacom.jpa.models.Certificato;
+import com.betacom.jpa.models.Socio;
+import com.betacom.jpa.repositories.ICertificatoRepository;
+import com.betacom.jpa.repositories.ISocioRepository;
+import com.betacom.jpa.requests.CertificatoRequest;
+import com.betacom.jpa.services.interfaces.ICertificatoServices;
+
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
+@Service
+public class CertificatoImpl implements ICertificatoServices{
+
+	@Autowired
+	private ICertificatoRepository certificatoRepository;
+	
+	@Autowired
+	private ISocioRepository socioRepository;
+	
+	@Override
+	public void create(CertificatoRequest req) throws AcademyException {
+
+		log.debug("Creata: " + req);
+		
+		Optional<Socio> soc = socioRepository.findById(req.getSocioId());
+		
+		if(soc.isEmpty()) throw new AcademyException("Socio non trovato!");
+		
+		Certificato cer = new Certificato();
+		
+		cer.setDataCertificato(req.getDataCertificato());
+		cer.setTipo(req.getTipo()); 
+		cer.setSocio(soc.get());
+		
+		certificatoRepository.save(cer);
+		
+	}
+
+	@Override
+	public List<SocioDTO> listAll() {
+	    List<Certificato> lc = certR.findAll();
+	    
+	    return lc.stream()
+	        .map(c -> SocioDTO.builder()
+	            .id(c.getSocio().getId())
+	            .cognome(c.getSocio().getCognome())
+	            .nome(c.getSocio().getNome())
+	            .codiceFiscale(c.getSocio().getCodiceFiscale())
+	            .email(c.getSocio().getEmail())
+	            .certificato(CertificatoDTO.builder()
+	                .id(c.getId())
+	                .dataCertificato(c.getDataCertificato())
+	                .tipo(c.getTipo())
+	                .build())
+	            .build())
+	        .collect(Collectors.toList());
+	}
+
+	
+}

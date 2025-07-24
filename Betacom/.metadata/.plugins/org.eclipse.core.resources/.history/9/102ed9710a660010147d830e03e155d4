@@ -1,0 +1,39 @@
+package com.betacom.sb.models;
+
+public class Marca {
+
+	private Integer id_marca;
+	private String marca;
+	
+	public Marca() {
+		
+	}
+
+	public Marca(Integer id_marca, String marca) {
+		super();
+		this.id_marca = id_marca;
+		this.marca = marca;
+	}
+
+	public Integer getId_marca() {
+		return id_marca;
+	}
+
+	public void setId_marca(Integer id_marca) {
+		this.id_marca = id_marca;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	@Override
+	public String toString() {
+		return "Marca [id_marca=" + id_marca + ", marca=" + marca + "]";
+	}
+	
+}

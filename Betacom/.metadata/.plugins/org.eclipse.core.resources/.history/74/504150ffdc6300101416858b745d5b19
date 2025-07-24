@@ -1,0 +1,13 @@
+package com.betacom.sb.component;
+
+import org.springframework.stereotype.Component;
+
+@Component
+
+public class BusinessComponent {
+	
+	public void listUffici() {
+		
+	}
+	
+}

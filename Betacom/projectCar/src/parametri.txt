@@ -1,0 +1,8 @@
+tipoVeicolo=Moto,Macchina,Bici
+ruote=1,2,3,4
+alimentazione=benzina,diesel,elettrica,manuale,ibrida
+categoria=strada,fuoristrada,ciclabile
+colore=giallo,blu,rosso
+marca=Fiat,Renault,Yamaha,Ducati, B1
+anno=1980,1990,2000,2010,2020
+modello=Panda,StreetRider 500,CityCruiser

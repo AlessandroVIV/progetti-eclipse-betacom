@@ -1,0 +1,11 @@
+package com.betacom;
+
+public class MainPatternBuilder {
+
+	public static void main(String[] args) {
+		     
+		System.out.println("Inizia MainPatternBuilder");
+
+	}
+
+}

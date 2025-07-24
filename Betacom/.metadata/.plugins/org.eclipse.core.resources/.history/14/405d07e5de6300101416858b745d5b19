@@ -1,0 +1,19 @@
+package com.betacom.sb.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UfficiDAO {
+
+	private final JdbcTemplate jdbcTemplate; // Definisco il template JDBC (gestito da Spring)
+	
+	@Autowired
+	public UfficiDAO(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+	
+}

@@ -1,0 +1,7 @@
+package com.betacom.jpa.response;
+
+public class ResponseList extends ResponseBase{
+
+	
+	
+}

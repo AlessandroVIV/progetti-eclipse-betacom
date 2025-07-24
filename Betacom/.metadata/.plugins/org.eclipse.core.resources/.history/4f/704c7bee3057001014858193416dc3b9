@@ -1,0 +1,59 @@
+package com.betacom.car.Singletone;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.betacom.car.Models.Macchina;
+import com.betacom.car.Models.Veicolo;
+
+/*
+ * gestione dell'ID veicolo
+ * gestione della targa (univoca)
+ * gestrion della lista veicolo (inserimento)
+ * display della lista4
+ */
+
+public class ListManager {
+
+	// Dichiaro l'istanza
+	private static ListManager instance = null;
+	
+	// Controlli
+	private List<Veicolo> listaV = new ArrayList<Veicolo>();
+
+	public ListManager() {
+		super();
+	};
+
+	// Si crea poi la presa dell'istanza
+	public static ListManager getInstance() {
+		
+		if(instance == null) {
+			instance = new ListManager();
+		}
+		
+		return instance;
+		
+	}
+	
+	// Dichiaro il contatore
+	private Integer idx = 0;
+	
+	// Dichiaro la funzione che lo fa aumentare
+	public Integer getNextId() {
+		idx++;
+		return idx;
+	}
+	
+	public void addVeicolo(Veicolo v) {
+		listaV.add(v);
+	}
+	
+	public List<Veicolo> getLista() {
+	    return listaV;
+	}
+
+	
+}
