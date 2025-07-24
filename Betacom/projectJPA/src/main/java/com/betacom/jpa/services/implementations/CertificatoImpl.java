@@ -15,7 +15,6 @@ import com.betacom.jpa.models.Socio;
 import com.betacom.jpa.repositories.ICertificatoRepository;
 import com.betacom.jpa.repositories.ISocioRepository;
 import com.betacom.jpa.requests.CertificatoRequest;
-import com.betacom.jpa.requests.SocioReq;
 import com.betacom.jpa.services.interfaces.ICertificatoServices;
 
 import lombok.extern.log4j.Log4j2;
