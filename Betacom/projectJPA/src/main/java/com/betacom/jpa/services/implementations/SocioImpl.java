@@ -7,9 +7,11 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.betacom.jpa.dto.AbbonamentoDTO;
 import com.betacom.jpa.dto.CertificatoDTO;
 import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.exception.AcademyException;
+import com.betacom.jpa.models.Abbonamento;
 import com.betacom.jpa.models.Socio;
 import com.betacom.jpa.repositories.ISocioRepository;
 import com.betacom.jpa.requests.SocioReq;
@@ -40,7 +42,6 @@ public class SocioImpl implements ISocioServices {
 		
 		if(req.getCognome() == null) throw new AcademyException("Cognome obbligatorio!");
 		if(req.getNome() == null) throw new AcademyException("Nome obbligatorio!");
-//		if(req.getCodiceFiscale() == null) throw new AcademyException("Codice fiscale obbligatorio!");
 
 		soc.setCognome(req.getCognome());
 		soc.setEmail(req.getEmail());
@@ -108,10 +109,19 @@ public class SocioImpl implements ISocioServices {
 				.certificato((s.getCertificato() == null) ? null
 						: CertificatoDTO.builder().id(s.getCertificato().getId()).tipo(s.getCertificato().getTipo())
 								.dataCertificato(s.getCertificato().getDataCertificato()).build())
+				.abbonamento(buildAbbonamento(s.getAbbonamento()))
 				.build()).collect(Collectors.toList());
-
+		
 	}
 
+	private List<AbbonamentoDTO> buildAbbonamento(List<Abbonamento> ab) {
+	    return ab.stream()
+	        .map(a -> AbbonamentoDTO.builder()
+	            .id(a.getId())
+	            .dataIscrizione(a.getDataIscrizione())
+	            .build())
+	        .collect(Collectors.toList());
+	}
 
 
 }

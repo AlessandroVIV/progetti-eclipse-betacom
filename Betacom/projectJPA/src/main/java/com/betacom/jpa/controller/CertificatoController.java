@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.requests.CertificatoRequest;
-import com.betacom.jpa.requests.SocioReq;
 import com.betacom.jpa.response.ResponseBase;
 import com.betacom.jpa.response.ResponseList;
 import com.betacom.jpa.services.interfaces.ICertificatoServices;
