@@ -16,5 +16,4 @@ public interface ICertificatoServices {
 	
 	List<SocioDTO> listAll();
 	
-	
 }
