@@ -1,8 +1,0 @@
-package com.betacom.sb.models;
-
-public class Uffici {
-
-	private Integer id_ufficio;
-	private String nome_ufficio;
-	
-}

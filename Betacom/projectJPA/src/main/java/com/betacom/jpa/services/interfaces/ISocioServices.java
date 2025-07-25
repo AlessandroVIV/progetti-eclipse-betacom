@@ -14,6 +14,8 @@ public interface ISocioServices {
 	
 	void update(SocioReq req) throws AcademyException;
 	
+	SocioDTO getSocioById(Integer id) throws AcademyException;
+	
 	List<SocioDTO> listAll();
 	
 }

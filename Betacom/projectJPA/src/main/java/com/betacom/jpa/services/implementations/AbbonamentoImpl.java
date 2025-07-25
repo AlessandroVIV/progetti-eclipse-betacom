@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.betacom.jpa.dto.AbbonamentoDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.models.Abbonamento;
 import com.betacom.jpa.models.Socio;
@@ -11,12 +12,13 @@ import com.betacom.jpa.repositories.IAbbonamentoRepository;
 import com.betacom.jpa.repositories.ISocioRepository;
 import com.betacom.jpa.requests.AbbonamentoRequest;
 import com.betacom.jpa.services.interfaces.IAbbonamentoServices;
+import com.betacom.jpa.utils.Utilities;
 
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Service
-public class AbbonamentoImpl implements IAbbonamentoServices{
+public class AbbonamentoImpl extends Utilities implements IAbbonamentoServices{
 
 	private IAbbonamentoRepository abbonamentoRepository;
 	private ISocioRepository socioRepository;
@@ -43,6 +45,23 @@ public class AbbonamentoImpl implements IAbbonamentoServices{
 		abbo.setSocio(s.get());
 		
 		abbonamentoRepository.save(abbo);
+		
+	}
+
+	@Override
+	public AbbonamentoDTO getById(Integer id) throws AcademyException {
+
+		Optional<Abbonamento> abb = abbonamentoRepository.findById(id);
+		
+		if(abb.isEmpty()) throw new AcademyException("Abbonamento non presente nel database" + id);
+		
+		Abbonamento a = abb.get();
+		
+		return AbbonamentoDTO.builder()                
+				.id(a.getId())
+                .dataIscrizione(a.getDataIscrizione())
+                .attivita(buildAttivita(a.getAttivita()))
+                .build();
 		
 	}
 

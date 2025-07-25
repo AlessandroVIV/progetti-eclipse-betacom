@@ -1,9 +1,0 @@
-package com.betacom.sb.component;
-
-import org.springframework.stereotype.Component;
-
-@Component
-t
-public class BusinessComponent {
-
-}
