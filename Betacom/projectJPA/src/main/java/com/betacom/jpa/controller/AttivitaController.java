@@ -78,7 +78,7 @@ public class AttivitaController {
 		return responseBase;
 	}
 
-	@PutMapping("/createAttivitaAbbonamento")
+	@PostMapping("/createAttivitaAbbonamento")
 	public ResponseBase createAttivitaAbbonamento(@RequestBody(required = true) AttivitaRequest req) {
 		ResponseBase responseBase = new ResponseBase();
 		try {

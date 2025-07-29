@@ -46,7 +46,7 @@ public class AttivitaImpl implements IAttivitaServices{
 	    }
 
 	    Attivita at = new Attivita();
-	    at.setDescrizione(req.getDescrizione().trim().toUpperCase());
+	    at.setDescrizione(req.getDescrizione().trim());
 
 	    if (req.getPrezzo() == null) {
 	        throw new AcademyException("Prezzo non presente");
@@ -166,8 +166,5 @@ public class AttivitaImpl implements IAttivitaServices{
 	    }
 	    
 	}
-
-
-
 
 }

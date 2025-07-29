@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.betacom.jpa.dto.AbbonamentoDTO;
+import com.betacom.jpa.dto.RicevutaDTO;
 import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.requests.SocioReq;
 import com.betacom.jpa.response.ResponseBase;
@@ -39,6 +39,43 @@ public class SocioController {
 	    }
 	    return r;
 	}
+	
+	@GetMapping("/listByAttivita")
+	public ResponseList<SocioDTO> listByAttivita(@RequestParam(required = true) String attivita) {
+		
+	    ResponseList<SocioDTO> r = new ResponseList<SocioDTO>();
+	    
+	    try {
+	        r.setDati(socioServices.listByAttivita(attivita));
+	        r.setRc(true);
+	    } catch (Exception e) {
+	        r.setRc(false);
+	        r.setMsg(e.getMessage());
+	    }
+	    return r;
+	    
+	}
+	
+	@GetMapping("/listByFilter")
+	public ResponseList<SocioDTO> listByAttivita(
+	    @RequestParam(required = false) Integer id,
+	    @RequestParam(required = false) String nome,
+	    @RequestParam(required = false) String cognome,
+	    @RequestParam(required = false) String attivita
+	) {
+	    ResponseList<SocioDTO> r = new ResponseList<>();
+
+	    try {
+	        r.setDati(socioServices.listByFilter(id, nome, cognome, attivita));
+	        r.setRc(true);
+	    } catch (Exception e) {
+	        r.setRc(false);
+	        r.setMsg(e.getMessage());
+	    }
+
+	    return r;
+	}
+
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody(required = true) SocioReq req) {
@@ -95,5 +132,19 @@ public class SocioController {
 		return r;
 		
 	}
+	
+	@GetMapping("/ricevute")
+	public ResponseList<RicevutaDTO> ricevute(@RequestParam(required = false) Integer idAbbonamento) {
+	    ResponseList<RicevutaDTO> r = new ResponseList<>();
+	    try {
+	        r.setDati(socioServices.generaRicevute(idAbbonamento));
+	        r.setRc(true);
+	    } catch (Exception e) {
+	        r.setRc(false);
+	        r.setMsg(e.getMessage());
+	    }
+	    return r;
+	}
+
 	
 }

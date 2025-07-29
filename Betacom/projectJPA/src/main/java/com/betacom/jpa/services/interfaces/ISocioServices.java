@@ -2,6 +2,7 @@ package com.betacom.jpa.services.interfaces;
 
 import java.util.List;
 
+import com.betacom.jpa.dto.RicevutaDTO;
 import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.requests.SocioReq;
@@ -17,5 +18,13 @@ public interface ISocioServices {
 	SocioDTO getSocioById(Integer id) throws AcademyException;
 	
 	List<SocioDTO> listAll();
+	
+	List<SocioDTO>listByAttivita(String attivita);	
+	
+	List<SocioDTO> listByFilter(Integer id, String nome, String cognome, String attivita);
+	
+	List<RicevutaDTO> generaRicevute(Integer idAbbonamento);
+
+
 	
 }

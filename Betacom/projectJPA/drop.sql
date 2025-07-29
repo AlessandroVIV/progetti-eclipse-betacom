@@ -1,26 +1,26 @@
 
-    alter table abbonamento_attivita 
-       drop 
-       foreign key FK853iwjge5sco7nac3v8pvs72v;
+    set client_min_messages = WARNING;
 
-    alter table abbonamento_attivita 
-       drop 
-       foreign key FK7slwjgyb7wchv5gnm07g9m6v1;
+    alter table if exists abbonamento_attivita 
+       drop constraint if exists FK853iwjge5sco7nac3v8pvs72v;
 
-    alter table abbonamento_socio 
-       drop 
-       foreign key FKnocg3o0qcq1tningp2l4lmk6r;
+    alter table if exists abbonamento_attivita 
+       drop constraint if exists FK7slwjgyb7wchv5gnm07g9m6v1;
 
-    alter table certificato_medico 
-       drop 
-       foreign key FKr17u6bpruq0epjt5g760mbe7c;
+    alter table if exists abbonamento_socio 
+       drop constraint if exists FKnocg3o0qcq1tningp2l4lmk6r;
 
-    drop table if exists abbonamento_attivita;
+    alter table if exists certificato_medico 
+       drop constraint if exists FKr17u6bpruq0epjt5g760mbe7c;
 
-    drop table if exists abbonamento_socio;
+    drop table if exists abbonamento_attivita cascade;
 
-    drop table if exists attivita;
+    drop table if exists abbonamento_socio cascade;
 
-    drop table if exists certificato_medico;
+    drop table if exists attivita cascade;
 
-    drop table if exists socio;
+    drop table if exists certificato_medico cascade;
+
+    drop table if exists messaggi_sistema cascade;
+
+    drop table if exists socio cascade;

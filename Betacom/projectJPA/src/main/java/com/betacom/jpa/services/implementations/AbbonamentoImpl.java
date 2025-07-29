@@ -3,6 +3,9 @@ package com.betacom.jpa.services.implementations;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.betacom.jpa.dto.AbbonamentoDTO;
 import com.betacom.jpa.exception.AcademyException;
@@ -28,6 +31,7 @@ public class AbbonamentoImpl extends Utilities implements IAbbonamentoServices{
 		this.socioRepository = socioRepository;
 	}
 
+	@Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
 	@Override
 	public void create(AbbonamentoRequest req) throws AcademyException {
 
@@ -53,7 +57,7 @@ public class AbbonamentoImpl extends Utilities implements IAbbonamentoServices{
 
 		Optional<Abbonamento> abb = abbonamentoRepository.findById(id);
 		
-		if(abb.isEmpty()) throw new AcademyException("Abbonamento non presente nel database" + id);
+		if(abb.isEmpty()) throw new AcademyException("Abbonamento non presente nel database: " + id);
 		
 		Abbonamento a = abb.get();
 		
@@ -64,7 +68,22 @@ public class AbbonamentoImpl extends Utilities implements IAbbonamentoServices{
                 .build();
 		
 	}
-
 	
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public void remove(AbbonamentoRequest req) throws AcademyException {
+		
+	    Optional<Abbonamento> ab = abbonamentoRepository.findById(req.getId());
+	    
+	    if (ab.isEmpty()) throw new AcademyException("Abbonamento non presente id database: " + req.getId());
+	
+	    if (!ab.get().getAttivita().isEmpty()) {
+	        ab.get().getAttivita().removeAll(ab.get().getAttivita());
+	        abbonamentoRepository.save(ab.get());
+	    }
+
+	    abbonamentoRepository.delete(ab.get());
+	    
+	}
 	
 }

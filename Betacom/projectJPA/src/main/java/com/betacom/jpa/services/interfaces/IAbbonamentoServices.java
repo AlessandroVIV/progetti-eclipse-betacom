@@ -8,6 +8,8 @@ public interface IAbbonamentoServices {
 
 	void create(AbbonamentoRequest req) throws AcademyException;
 	
-	AbbonamentoDTO getById(Integer id) throws AcademyException;	
+	AbbonamentoDTO getById(Integer id) throws AcademyException;
+
+	void remove(AbbonamentoRequest req) throws AcademyException;	
 	
 }

@@ -1,7 +1,0 @@
-package com.betacom.jpa.services;
-
-public interface ISocioServices {
-
-	void insert();
-	
-}
