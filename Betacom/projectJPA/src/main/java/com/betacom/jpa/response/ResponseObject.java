@@ -1,6 +1,5 @@
 package com.betacom.jpa.response;
 
-import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;

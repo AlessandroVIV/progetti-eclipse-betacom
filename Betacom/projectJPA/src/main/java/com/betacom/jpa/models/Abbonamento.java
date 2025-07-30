@@ -42,5 +42,4 @@ public class Abbonamento {
 			   inverseJoinColumns = @JoinColumn(name = "attivita_id"))
 	List<Attivita> attivita;
 	
-	
 }
