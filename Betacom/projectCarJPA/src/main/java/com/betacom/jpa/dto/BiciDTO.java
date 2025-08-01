@@ -13,7 +13,6 @@ public class BiciDTO {
 	private Integer numeroMarce;
 	private Boolean pieghevole;
 
-	private Integer idSospensione;
-	private Integer idVeicolo;
+	private VeicoloDTO veicoloDTO;
 	
 }

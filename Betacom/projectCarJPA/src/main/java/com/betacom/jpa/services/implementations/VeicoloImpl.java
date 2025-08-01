@@ -18,10 +18,13 @@ import com.betacom.jpa.models.NumeroRuote;
 import com.betacom.jpa.models.Sospensione;
 import com.betacom.jpa.models.Veicolo;
 import com.betacom.jpa.repositories.IAlimentazioneRepository;
+import com.betacom.jpa.repositories.IBiciRepository;
 import com.betacom.jpa.repositories.ICategoriaRepository;
 import com.betacom.jpa.repositories.IColoreRepository;
+import com.betacom.jpa.repositories.IMacchinaRepository;
 import com.betacom.jpa.repositories.IMarcaRepository;
 import com.betacom.jpa.repositories.IModelloRepository;
+import com.betacom.jpa.repositories.IMotoRepository;
 import com.betacom.jpa.repositories.INumeroRuoteRepository;
 import com.betacom.jpa.repositories.ISospensioneRepository;
 import com.betacom.jpa.repositories.IVeicoloRepository;
@@ -40,6 +43,15 @@ public class VeicoloImpl implements IVeicoloServices{
 	@Autowired
 	IVeicoloRepository veicoloRepository;
 
+	@Autowired
+	IMotoRepository motoRepository;
+	
+	@Autowired
+	IMacchinaRepository macchinaRepository;
+	
+	@Autowired
+	IBiciRepository biciRepository;
+	
     @Autowired
     private IAlimentazioneRepository alimentazioneRepository;
     
@@ -270,5 +282,24 @@ public class VeicoloImpl implements IVeicoloServices{
 	    return Utilities.buildListVeicoloDTO(ls);
 	}
 
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public void deleteByVeicoloId(Integer idVeicolo) throws AcademyException {
+		
+	    Optional<Veicolo> veicoloOpt = veicoloRepository.findById(idVeicolo);
+
+	    if (veicoloOpt.isEmpty()) throw new AcademyException("Veicolo con ID " + idVeicolo + " non trovato");
+
+	    Veicolo veicolo = veicoloOpt.get();
+
+	    if (veicolo.getMacchina() != null) macchinaRepository.delete(veicolo.getMacchina());
+	    
+	    if (veicolo.getMoto() != null) motoRepository.delete(veicolo.getMoto());
+	    
+	    if (veicolo.getBici() != null) biciRepository.delete(veicolo.getBici());
+	    
+	    veicoloRepository.delete(veicolo);
+	    
+	}
 
 }

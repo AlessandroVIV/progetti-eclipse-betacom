@@ -13,6 +13,6 @@ public class MotoDTO {
 	private String targa;
 	private Integer cc;
 	
-	private Integer idVeicolo;
+	private VeicoloDTO veicoloDTO;
 	
 }

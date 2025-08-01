@@ -10,7 +10,6 @@ public class ProjectCarJpaApplication {
 		
 		SpringApplication.run(ProjectCarJpaApplication.class, args);
 		
-	
 	}
 
 }

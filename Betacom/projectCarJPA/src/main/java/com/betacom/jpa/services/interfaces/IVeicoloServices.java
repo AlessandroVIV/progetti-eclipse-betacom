@@ -18,5 +18,7 @@ public interface IVeicoloServices {
 	Veicolo createVeicolo(BiciRequest req) throws AcademyException;
 	
 	List<VeicoloDTO> findAll();
+
+	void deleteByVeicoloId(Integer idVeicolo) throws AcademyException;
 	
 }

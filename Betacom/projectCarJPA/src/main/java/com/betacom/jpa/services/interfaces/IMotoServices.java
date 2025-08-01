@@ -7,4 +7,6 @@ public interface IMotoServices {
 
 	void create(MotoRequest req) throws AcademyException;
 	
+	void deleteByMotoId(MotoRequest req) throws AcademyException;
+	
 }

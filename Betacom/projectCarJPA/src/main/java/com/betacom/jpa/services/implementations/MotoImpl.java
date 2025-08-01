@@ -1,5 +1,7 @@
 package com.betacom.jpa.services.implementations;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,6 +44,20 @@ public class MotoImpl implements IMotoServices{
         moto.setVeicolo(veicoloCreato);
 
         motoRepository.save(moto);
+		
+	}
+
+    @Transactional(rollbackFor = Exception.class)
+	@Override
+	public void deleteByMotoId(MotoRequest req) throws AcademyException {
+		
+        if (req.getId_moto() == null) throw new AcademyException("ID Moto mancante");
+        
+        Optional<Moto> motoOpt = motoRepository.findById(req.getId_moto());
+        
+        if (motoOpt.isEmpty()) throw new AcademyException("Moto con ID " + req.getId_moto() + " non trovata");
+
+        motoRepository.delete(motoOpt.get());
 		
 	}
 

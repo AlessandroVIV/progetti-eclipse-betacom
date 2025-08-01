@@ -1,5 +1,7 @@
 package com.betacom.jpa.services.implementations;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,6 +43,20 @@ public class BiciImpl implements IBiciServices{
         bici.setVeicolo(veicoloCreato);
 
         biciRepository.save(bici);
+		
+	}
+
+    @Transactional(rollbackFor = Exception.class)
+	@Override
+	public void deleteByBiciId(BiciRequest req) throws AcademyException {
+		
+        if (req.getId_bici() == null) throw new AcademyException("ID Bici mancante");
+        
+        Optional<Bici> BiciOpt = biciRepository.findById(req.getId_bici());
+        
+        if (BiciOpt.isEmpty()) throw new AcademyException("Macchina con ID " + req.getId_bici() + " non trovata");
+
+        biciRepository.delete(BiciOpt.get());
 		
 	}
 

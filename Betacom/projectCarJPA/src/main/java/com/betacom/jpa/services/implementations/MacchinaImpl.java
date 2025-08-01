@@ -1,5 +1,7 @@
 package com.betacom.jpa.services.implementations;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,5 +49,19 @@ public class MacchinaImpl implements IMacchinaServices{
         macchinaRepository.save(macchina);
 		
 	}
+    
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteByMacchinaId(MacchinaRequest req) throws AcademyException {
+
+        if (req.getId_macchina() == null) throw new AcademyException("ID Macchina mancante");
+  
+        Optional<Macchina> macchinaOpt = macchinaRepository.findById(req.getId_macchina());
+        
+        if (macchinaOpt.isEmpty()) throw new AcademyException("Macchina con ID " + req.getId_macchina() + " non trovata");
+
+        macchinaRepository.delete(macchinaOpt.get());
+        
+    }
 
 }

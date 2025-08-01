@@ -7,4 +7,6 @@ public interface IMacchinaServices {
 
 	void create(MacchinaRequest req) throws AcademyException;
 	
+	void deleteByMacchinaId(MacchinaRequest req) throws AcademyException;
+	
 }

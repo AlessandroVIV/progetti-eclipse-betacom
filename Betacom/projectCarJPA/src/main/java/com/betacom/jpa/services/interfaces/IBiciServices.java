@@ -7,4 +7,6 @@ public interface IBiciServices {
 
 	void create(BiciRequest req) throws AcademyException;
 	
+	void deleteByBiciId(BiciRequest req) throws AcademyException;
+	
 }

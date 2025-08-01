@@ -1,5 +1,6 @@
 package com.betacom.jpa.models;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,8 +30,9 @@ public class Moto {
 	@Column(name = "cc")
 	private Integer cc;
 	
-    @ManyToOne
-    @JoinColumn(name = "id_veicolo")
-    private Veicolo veicolo;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_veicolo")
+	private Veicolo veicolo;
+
 	
 }

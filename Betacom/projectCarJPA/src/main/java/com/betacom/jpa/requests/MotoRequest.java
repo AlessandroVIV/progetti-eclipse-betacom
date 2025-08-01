@@ -9,6 +9,7 @@ import lombok.ToString;
 @ToString
 public class MotoRequest {
 
+	private Integer id_moto;
 	private String alimentazione;
 	private String categoria;
 	private String marca;
