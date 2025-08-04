@@ -27,25 +27,24 @@ public class MotoImpl implements IMotoServices{
     private IMotoRepository motoRepository;
     
     @Transactional(rollbackFor = Exception.class)
-	@Override
-	public void create(MotoRequest req) throws AcademyException {
-    	
-        if (req.getCc() == null || req.getCc() < 0) throw new AcademyException("Cilindrata non valida");
+    @Override
+    public void create(MotoRequest req) throws AcademyException {
 
+        if (req.getCc() == null || req.getCc() < 0) throw new AcademyException("Cilindrata non valida");
         if (req.getTarga() == null || req.getTarga().isBlank()) throw new AcademyException("Targa obbligatoria");
-        
+
         Moto moto = new Moto();
-        
         moto.setCc(req.getCc());
         moto.setTarga(req.getTarga());
 
         Veicolo veicoloCreato = veicoloServices.createVeicolo(req);
-        
-        moto.setVeicolo(veicoloCreato);
 
+        moto.setVeicolo(veicoloCreato);
+    
         motoRepository.save(moto);
-		
-	}
+
+    }
+
 
     @Transactional(rollbackFor = Exception.class)
 	@Override
