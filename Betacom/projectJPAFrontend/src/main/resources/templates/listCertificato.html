@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="it" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-	crossorigin="anonymous">
-<title>Lista Certificato</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Certificato Medico</title>
 </head>
 <body>
 
-	<nav th:insert="~{fragments/navigation :: block-navigation('Certificato Medico')}"></nav>
+    <nav th:insert="~{fragments/navigation :: block-navigation('Certificato medico del socio')}"></nav>
+
+    <div class="container mt-5" align="center">
+
+        <div th:if="${certificato != null}" class="mt-4">
+        
+            <table class="table table-bordered w-50">
+                <tr>
+                    <th>Tipo</th>
+                    <td th:text="${certificato.tipo ? 'Agonistico' : 'Normale'}"></td>
+                </tr>
+                <tr>
+                    <th>Data rilascio</th>
+                    <td th:text="${certificato.dataCertificato}"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div th:if="${certificato == null}" class="alert alert-warning mt-4 w-50">
+            Nessun certificato presente per questo socio.
+        </div>
+        
+    </div>
 
 </body>
 </html>

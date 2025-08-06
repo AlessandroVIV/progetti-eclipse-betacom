@@ -70,7 +70,7 @@
 						</a>
 					</td>
 					<td align="center">
-						<a th:href="@{/listAbbonamenti(id=${socio.id})}">
+						<a th:href="@{listAbbonamenti(id=${socio.id})}">
 							<span th:text="${#lists.size(socio.abbonamento) > 0 ? 'abbonamenti attivi' : 'senza abbonamento'}"></span>
 						</a>
 					</td>
