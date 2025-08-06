@@ -65,7 +65,7 @@
 					<td th:text="${socio.codiceFiscale}" align="center"></td>
 					<td th:text="${socio.email}" align="center"></td>
 					<td align="center">
-						<a th:href="@{certificato{id=${socio.id}}}">
+						<a th:href="@{listCertificato(id=${socio.id})}">
 							<span th:text="${socio.certificato != null ? (socio.certificato.tipo ? 'agonistico' : 'normale') : 'senza'}"></span>
 						</a>
 					</td>

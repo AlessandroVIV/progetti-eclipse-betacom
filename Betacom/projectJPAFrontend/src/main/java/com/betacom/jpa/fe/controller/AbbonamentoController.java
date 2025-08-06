@@ -1,11 +1,20 @@
 package com.betacom.jpa.fe.controller;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.betacom.jpa.fe.dto.SocioDTO;
+import com.betacom.jpa.fe.requests.AbbonamentoRequest;
+import com.betacom.jpa.fe.response.ResponseBase;
+import com.betacom.jpa.fe.response.ResponseObject;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -19,13 +28,53 @@ public class AbbonamentoController {
 	@GetMapping("listAbbonamenti")
 	public ModelAndView listAbbonamenti(@RequestParam Integer id) {
 		
-		log.debug("listAbbonamenti" + id);
+	    log.debug("listAbbonamenti: " + id);
+	    
+	    ModelAndView mav = new ModelAndView("listAbbonamenti");
+
+	    SocioDTO soc = clientWeb.get()
+	        .uri(uriBuilder -> uriBuilder
+	            .path("socio/getSocioById")
+	            .queryParam("id", id)
+	            .build())
+	        .retrieve()
+	        .bodyToMono(new ParameterizedTypeReference<ResponseObject<SocioDTO>>() {})
+	        .block()
+	        .getDati();
+
+	    log.debug("socio abbo: " + soc.getAbbonamento().size());
+
+	    soc.getAbbonamento().forEach(a -> log.debug(a.toString()));
+	    
+	    mav.addObject("socioId", id);
+	   
+	    mav.addObject("listAbb", soc.getAbbonamento());
+
+	    return mav;
+	    
+	}
+
+	@GetMapping("createAbbonamento")
+	public String createAbbonamento(@RequestParam Integer socioId) {
 		
-		ModelAndView mav = new ModelAndView("listAbbonamenti");
+		log.debug("Create abbonamento: " + socioId);
 		
+		AbbonamentoRequest req = new AbbonamentoRequest();
 		
+		req.setSocioId(socioId);
+		req.setDataIscrizione(LocalDate.now());
 		
-		return mav;
+		ResponseBase resp = clientWeb.post()
+				.uri("abbonamento/create")
+				.contentType(MediaType.APPLICATION_JSON)
+				.bodyValue(req)
+				.retrieve()
+				.bodyToMono(ResponseBase.class)
+				.block();
+		
+		log.debug("rc: " + resp.getRc());
+		
+		return "redirect:/listAbbonamenti?id=" + socioId;
 		
 	}
 	

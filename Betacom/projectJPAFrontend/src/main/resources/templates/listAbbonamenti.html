@@ -12,6 +12,40 @@
 <body>
 
 	<nav th:insert="~{fragments/navigation :: block-navigation('Elenco abbonamenti per Socio')}"></nav>
+	
+	<div align="center" class="container">
+	
+		<input type="text" th:value="${socioId}">
+	
+		<table class="table table-stripped">
+		
+			<thead>
+				<tr align="center">
+					<th>Data iscrizione</th>
+					<th>Attività</th>
+					<th>
+						<a th:href="@{createAbbonamento(socioId=${socioId})}" class="btn btn-primary">Crea nuovo abbonamento</a>
+					</th>
+				</tr>
+			</thead>
+			
+			<tbody align="center">
+				<tr th:each="abb : ${listAbb}">
+					<td th:text="${abb.dataIscrizione}"></td>
+					<td align="center">
+						<ul class="list-unstyled">
+							<li th:each="att : ${abb.attivita}">
+								<span th:text="${att.descrizione + ' - ' + att.prezzo + '€'}"></span>
+							</li>
+							<a th:href="@{aggiungiAttivita(abbonamentoID=${abb.id})}" class="btn btn-primary mt-2">Aggiungi attività</a>
+						</ul>
+					</td>
+				</tr>
+			</tbody>	
+			
+		</table>
+		
+	</div>
 
 </body>
 </html>

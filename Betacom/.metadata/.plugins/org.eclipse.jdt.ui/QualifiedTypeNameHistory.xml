@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.boot.test.autoconfigure.webservices.server.AutoConfigureMockWebServiceClient"/>
-    <fullyQualifiedTypeName name="com.betacom.jpa.AttivitaControllerTest"/>
     <fullyQualifiedTypeName name="com.betacom.jpa.controller.AttivitaController"/>
     <fullyQualifiedTypeName name="com.betacom.jpa.requests.AttivitaReq"/>
     <fullyQualifiedTypeName name="com.betacom.jpa.controller.SocioController"/>
@@ -36,7 +34,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
-    <fullyQualifiedTypeName name="com.betacom.jpa.fe.response.ResponseBase"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="java.net.URI"/>
     <fullyQualifiedTypeName name="org.springframework.web.util.UriBuilder"/>
@@ -51,13 +48,16 @@
     <fullyQualifiedTypeName name="lombok.Builder"/>
     <fullyQualifiedTypeName name="org.springframework.objenesis.instantiator.basic.NewInstanceInstantiator"/>
     <fullyQualifiedTypeName name="com.betacom.jpa.fe.requests.SocioReq"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="com.betacom.jpa.fe.response.ResponseList"/>
     <fullyQualifiedTypeName name="org.springframework.web.reactive.function.client.WebClient"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.betacom.jpa.fe.requests.AbbonamentoRequest"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.betacom.jpa.fe.response.ResponseBase"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 </qualifiedTypeNameHistroy>
