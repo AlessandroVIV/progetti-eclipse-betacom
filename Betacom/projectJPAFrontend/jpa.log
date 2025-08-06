@@ -1,0 +1,57 @@
+2025-08-06T09:18:15.543+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : Starting ProjectJpaFrontendApplication using Java 21.0.7 with PID 3620 (C:\Users\Ho\eclipse-workspace\progetti-eclipse-betacom\Betacom\projectJPAFrontend\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\progetti-eclipse-betacom\Betacom\projectJPAFrontend)
+2025-08-06T09:18:15.550+02:00 DEBUG 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : Running with Spring Boot v3.4.8, Spring v6.2.9
+2025-08-06T09:18:15.551+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-06T09:18:15.626+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-06T09:18:15.626+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-06T09:18:17.274+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-06T09:18:17.296+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-06T09:18:17.297+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-06T09:18:17.362+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-06T09:18:17.363+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1736 ms
+2025-08-06T09:18:18.482+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-06T09:18:18.533+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-06T09:18:18.543+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : Started ProjectJpaFrontendApplication in 3.672 seconds (process running for 8.745)
+2025-08-06T09:18:46.925+02:00  INFO 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06T09:18:46.925+02:00  INFO 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-06T09:18:46.927+02:00  INFO 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-06T09:18:48.099+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] c.b.jpa.fe.controller.SocioController    : Response rc: true
+2025-08-06T09:18:48.132+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] c.b.jpa.fe.controller.SocioController    : Response attività rc: true
+2025-08-06T09:18:51.409+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-3] c.b.j.f.c.AbbonamentoController          : listAbbonamenti1
+2025-08-06T09:18:52.891+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-4] c.b.jpa.fe.controller.SocioController    : Response rc: true
+2025-08-06T09:18:52.914+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-4] c.b.jpa.fe.controller.SocioController    : Response attività rc: true
+2025-08-06T09:18:54.319+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-5] c.b.jpa.fe.controller.SocioController    : updateSocio: 1
+2025-08-06T09:18:54.383+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-5] c.b.jpa.fe.controller.SocioController    : Response: Pergola Michele
+2025-08-06T09:20:16.257+02:00  INFO 3620 --- [projectJPAFrontend] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-08-06T09:20:16.262+02:00  INFO 3620 --- [projectJPAFrontend] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06T09:20:16.274+02:00  INFO 3620 --- [projectJPAFrontend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-06T09:20:16.483+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : Starting ProjectJpaFrontendApplication using Java 21.0.7 with PID 3620 (C:\Users\Ho\eclipse-workspace\progetti-eclipse-betacom\Betacom\projectJPAFrontend\target\classes started by Ho in C:\Users\Ho\eclipse-workspace\progetti-eclipse-betacom\Betacom\projectJPAFrontend)
+2025-08-06T09:20:16.484+02:00 DEBUG 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : Running with Spring Boot v3.4.8, Spring v6.2.9
+2025-08-06T09:20:16.484+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-06T09:20:16.779+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-06T09:20:16.782+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-06T09:20:16.782+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-06T09:20:16.859+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-06T09:20:16.860+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 372 ms
+2025-08-06T09:20:16.998+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-06T09:20:17.012+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-06T09:20:17.020+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] c.b.j.fe.ProjectJpaFrontendApplication   : Started ProjectJpaFrontendApplication in 0.594 seconds (process running for 127.221)
+2025-08-06T09:20:17.022+02:00  INFO 3620 --- [projectJPAFrontend] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-06T09:21:04.349+02:00  INFO 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06T09:21:04.350+02:00  INFO 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-06T09:21:04.351+02:00  INFO 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-06T09:21:04.448+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] c.b.jpa.fe.controller.SocioController    : Response rc: true
+2025-08-06T09:21:04.471+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-1] c.b.jpa.fe.controller.SocioController    : Response attività rc: true
+2025-08-06T09:21:08.838+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-3] c.b.jpa.fe.controller.SocioController    : updateSocio: 1
+2025-08-06T09:21:08.873+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-3] c.b.jpa.fe.controller.SocioController    : Response: Pergola Michele
+2025-08-06T09:21:13.635+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-4] c.b.jpa.fe.controller.SocioController    : saveSocio: SocioReq(id=1, nome=Michele, cognome=Pergola, codiceFiscale=123456789, email=m.per@gmail.com, attivita=null, errorMsg=null)
+2025-08-06T09:21:13.722+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-4] c.b.jpa.fe.controller.SocioController    : update false
+2025-08-06T09:21:19.469+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-5] c.b.jpa.fe.controller.SocioController    : saveSocio: SocioReq(id=1, nome=Michele, cognome=Pergola, codiceFiscale=123456789e, email=m.per@gmail.com, attivita=null, errorMsg=null)
+2025-08-06T09:21:19.645+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-5] c.b.jpa.fe.controller.SocioController    : update true
+2025-08-06T09:21:19.693+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-6] c.b.jpa.fe.controller.SocioController    : Response rc: true
+2025-08-06T09:21:19.715+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-6] c.b.jpa.fe.controller.SocioController    : Response attività rc: true
+2025-08-06T09:21:22.295+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-7] c.b.j.f.c.AbbonamentoController          : listAbbonamenti7
+2025-08-06T09:21:23.557+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-8] c.b.jpa.fe.controller.SocioController    : Response rc: true
+2025-08-06T09:21:23.578+02:00 DEBUG 3620 --- [projectJPAFrontend] [http-nio-8080-exec-8] c.b.jpa.fe.controller.SocioController    : Response attività rc: true
+2025-08-06T09:26:01.554+02:00  INFO 3620 --- [projectJPAFrontend] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-08-06T09:26:01.555+02:00  INFO 3620 --- [projectJPAFrontend] [RMI TCP Connection(11)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06T09:26:01.561+02:00  INFO 3620 --- [projectJPAFrontend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete

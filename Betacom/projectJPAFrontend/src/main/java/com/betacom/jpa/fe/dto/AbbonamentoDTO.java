@@ -1,0 +1,18 @@
+package com.betacom.jpa.fe.dto;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@Builder
+@Getter
+@Setter
+public class AbbonamentoDTO {
+
+	private Integer id;
+	private LocalDate dataIscrizione;
+	private List<AttivitaDTO> attivita;	
+}

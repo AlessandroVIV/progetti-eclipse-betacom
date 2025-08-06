@@ -63,7 +63,7 @@ public class MotoControllerTest {
     private ISospensioneRepository sospensioneRepository;
 	
 	@BeforeEach
-	public void setupMoto() {
+	public void setup() {
 		
 	    Alimentazione a = new Alimentazione();
 	    a.setTipoAlimentazione("benzina");

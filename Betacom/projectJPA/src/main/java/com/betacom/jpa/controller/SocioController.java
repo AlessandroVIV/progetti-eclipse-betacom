@@ -57,22 +57,32 @@ public class SocioController {
 	}
 	
 	@GetMapping("/listByFilter")
-	public ResponseList<SocioDTO> listByAttivita(
+	public ResponseList<SocioDTO> listByFilter(
 	    @RequestParam(required = false) Integer id,
 	    @RequestParam(required = false) String nome,
 	    @RequestParam(required = false) String cognome,
 	    @RequestParam(required = false) String attivita
 	) {
 	    ResponseList<SocioDTO> r = new ResponseList<>();
-
+	    
 	    try {
-	        r.setDati(socioServices.listByFilter(id, nome, cognome, attivita));
+
+	        if (id == null && 
+	            (nome == null || nome.isEmpty()) && 
+	            (cognome == null || cognome.isEmpty()) && 
+	            (attivita == null || attivita.isEmpty())) {
+	            
+	            r.setDati(socioServices.listAll());
+	        } else {
+
+	            r.setDati(socioServices.listByFilter(id, nome, cognome, attivita));
+	        }
 	        r.setRc(true);
 	    } catch (Exception e) {
 	        r.setRc(false);
 	        r.setMsg(e.getMessage());
 	    }
-
+	    
 	    return r;
 	}
 
@@ -116,7 +126,7 @@ public class SocioController {
 		return responseBase;
 	}
 	
-	@GetMapping("/getAbbonamento")
+	@GetMapping("/getSocioById")
 	public ResponseObject<SocioDTO> getSocioById(@RequestParam (required = true) Integer id){
 		
 		ResponseObject<SocioDTO> r = new ResponseObject<SocioDTO>();

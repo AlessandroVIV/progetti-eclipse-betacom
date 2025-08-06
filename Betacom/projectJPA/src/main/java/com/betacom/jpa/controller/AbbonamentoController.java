@@ -36,7 +36,7 @@ public class AbbonamentoController {
 		return responseBase;
 	}
 	
-	@GetMapping("/getAbbonamento")
+	@GetMapping("/getAbbonamentoById")
 	public ResponseObject<AbbonamentoDTO> getAbbonamento(@RequestParam (required = true) Integer id){
 		
 		ResponseObject<AbbonamentoDTO> r = new ResponseObject<AbbonamentoDTO>();

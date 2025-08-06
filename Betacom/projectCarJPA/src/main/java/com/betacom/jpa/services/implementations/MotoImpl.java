@@ -33,14 +33,14 @@ public class MotoImpl implements IMotoServices{
         if (req.getCc() == null || req.getCc() < 0) throw new AcademyException("Cilindrata non valida");
         if (req.getTarga() == null || req.getTarga().isBlank()) throw new AcademyException("Targa obbligatoria");
 
-        Moto moto = new Moto();
+        Moto moto = new Moto();       
         moto.setCc(req.getCc());
         moto.setTarga(req.getTarga());
 
         Veicolo veicoloCreato = veicoloServices.createVeicolo(req);
-
+        
         moto.setVeicolo(veicoloCreato);
-    
+ 
         motoRepository.save(moto);
 
     }
